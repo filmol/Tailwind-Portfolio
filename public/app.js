@@ -24,3 +24,47 @@ function hideMenu(e) {
 
     document.body.style.overflow = "auto";
 }   
+
+
+// About page rendering
+var aboutIcon = document.querySelector("#aboutIcon");
+aboutIcon.addEventListener("click", showAbout, false);
+
+var aboutPage = document.querySelector("#aboutPage");
+
+function showAbout(e) {
+    var gray = document.querySelector("#gray");
+    var lightGray = document.querySelector("#light-gray");
+
+    setTimeout(addGray, 0)
+    setTimeout(addLightGray, 100)
+    setTimeout(addAbout, 300)
+
+    function addGray() {
+        gray.classList.remove("translate-y-full");
+    }   
+    function addLightGray() {
+        lightGray.classList.remove("translate-y-full");
+    }   
+    function addAbout() {
+        aboutPage.classList.remove("translate-y-full");
+        container.style.display = "none";
+        document.body.style.overflow = "hidden";
+        console.log("Hej")
+    }
+}
+
+setInterval(letsWave, 4000)
+var wave = document.querySelector("#wave");
+
+function removeRotate() {
+    wave.classList.remove("rotate-12");
+} 
+function letsWave() {
+    wave.classList.add("rotate-12");
+    setTimeout(removeRotate,300)
+}
+
+
+var active = document.querySelector(".active")
+active.classList.add("underline")
