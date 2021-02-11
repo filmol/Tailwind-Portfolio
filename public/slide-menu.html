@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>tailwind portfolio</title>
+</head>
+
+<body>
+    <div class=" text-center transform translate-x-full transition-transform duration-500 transition-timing-function: cubic-bezier(0, .52, 0, 1); w-screen h-screen bg-gradient-to-t from-gray-700 via-gray-900 to-black text-white top-0 left-0 fixed" id="flyoutMenu">
+        <button class="absolute top-4 right-4 p-1 transition duration-500 ease-in-out text-gray-200 hover:text-red-600">
+            <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+        <div class="text-center">
+        <h2 class="mt-16 mb-16 lg:text-6xl sm:text-6xl  text-4xl  text-purple-600 hover:text-white duration-300 cursor-pointer"><a href="#">Home</a></h2>
+        <h2 class="mb-16 lg:text-6xl sm:text-6xl  text-4xl  text-purple-600 hover:text-white duration-300 cursor-pointer"><a href="#">Skills</a></h2>
+        <h2 class="mb-16 lg:text-6xl sm:text-6xl  text-4xl  text-purple-600 hover:text-white duration-300 cursor-pointer"><a href="#">Projects</a></h2>
+        <h2 class="mb-16 lg:text-6xl sm:text-6xl  text-4xl  text-purple-600 hover:text-white duration-300 cursor-pointer"><a href="#">Resume</a></h2>
+        <h2 class="mb-16 lg:text-6xl sm:text-6xl  text-4xl  text-purple-600 hover:text-white duration-300 cursor-pointer"><a href="#">Contact</a></h2>
+        </div>
+    </div>
+    
+    <!-- Hero Section -->
+    <div 
+    id="container"
+    class="bg-no-repeat h-screen bg-center bg-cover center" 
+    style="background-image: url('./images/img.JPG')"
+    >
+
+    <button class="absolute top-4 right-4 p-1 px-4 cursor-pointer bg-purple-400 rounded-xl transition duration-500 ease-in-out hover:text-white" id="hambugerIcon">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+    </button> 
+
+    <div class="center font-bold">
+        <h1 class="lg:text-9xl sm:text-6xl  text-4xl mb-10 text-purple-600 hover:text-white duration-300 cursor-pointer">
+            Filip Moltzer
+        </h1>
+        <a href="#" class="text-purple-600 text-xl transform hover:scale-150 duration-300 absolute bottom-4">
+            About Me
+            <svg class="inline w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+        </a>
+    </div>
+    <button class="w-10 h-10 absolute bottom-2 right-6 hover:text-white duration-300" id="">
+        <svg class="" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        </svg>
+    </button> 
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

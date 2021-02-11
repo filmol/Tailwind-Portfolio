@@ -1,39 +1,26 @@
-const bars = document.querySelector('#bars')
-const menu = document.querySelector('#menu')
 
-bars.addEventListener('click', () => {
-if (menu.classList.contains('hidden') && window.innerWidth < 768) {
-    menu.classList.remove('hidden');
-    menu.classList.add(
-        "flex",
-        "flex,col",
-        "text-center",
-        "bg-purple-600",
-        "w-full",
-        "absolute",
-        "top-16"
-    );
-} 
-else {
-    menu.classList.add("hidden");
+// Hambuger menu Functions
+var hambugerIcon = document.querySelector("#hambugerIcon");
+hambugerIcon.addEventListener("click", showMenu, false);
+
+var flyoutMenu = document.querySelector("#flyoutMenu");
+flyoutMenu.addEventListener("click", hideMenu, false);
+
+var container = document.querySelector("#container");
+
+function showMenu(e) {
+    flyoutMenu.classList.remove("translate-x-full");
+    container.style.display = "none";
+
+    console.log("Hej")
+    document.body.style.overflow = "hidden";
+
 }
-});
 
-menu.addEventListener('click', () => {
-    menu.classList.add('hidden');
-})
+function hideMenu(e) {
+    flyoutMenu.classList.add("translate-x-full");
+    container.style.display = "flex";
+    e.stopPropagation();
 
-window.addEventListener('resize', () => {
-    if(window.innerWidth > 768) {
-        menu.classList.add("hidden");
-        menu.classList.remove(
-            "flex",
-            "flex,col",
-            "text-center",
-            "bg-purple-600",
-            "w-full",
-            "absolute",
-            "top-16"
-        );
-    }
-})
+    document.body.style.overflow = "auto";
+}   
