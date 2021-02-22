@@ -25,10 +25,15 @@ function hideMenu(e) {
     document.body.style.overflow = "auto";
 }   
 
+// // Auto load aboutme when doc loaded
+// document.addEventListener("DOMContentLoaded", function(){
+//     setTimeout(function(){ showAbout(); }, 500);
+// });
 
 // About page rendering
 var aboutIcon = document.querySelector("#aboutIcon");
 aboutIcon.addEventListener("click", showAbout, false);
+aboutIcon.addEventListener("scroll", showAbout, false);
 
 var aboutPage = document.querySelector("#aboutPage");
 
@@ -37,8 +42,8 @@ function showAbout(e) {
     var lightGray = document.querySelector("#light-gray");
 
     setTimeout(addGray, 0)
-    setTimeout(addLightGray, 100)
-    setTimeout(addAbout, 300)
+    setTimeout(addLightGray, 200)
+    setTimeout(addAbout, 400)
 
     function addGray() {
         gray.classList.remove("translate-y-full");
