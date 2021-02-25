@@ -1,17 +1,30 @@
 {
-  "name": "Tailwind-Portfolio",
+  "name": "tailwind-portfolio",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build-css": "tailwindcss build src/styles.css -o public/styles.css"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC", 
+  "license": "ISC",
   "dependencies": {
+    "@dogstudio/highway": "^2.2.1",
     "autoprefixer": "^10.2.4",
+    "gsap": "^3.6.0",
     "postcss": "^8.2.5",
     "tailwindcss": "^2.0.3"
-  }
+  },
+  "devDependencies": {
+    "sass": "^1.32.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filmol/Tailwind-Portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/filmol/Tailwind-Portfolio/issues"
+  },
+  "homepage": "https://github.com/filmol/Tailwind-Portfolio#readme",
+  "description": ""
 }
