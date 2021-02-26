@@ -6,12 +6,6 @@
 
 .nav-list {
     height: 10vh;
-    width: 50%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: auto;
-    list-style: none;
 }
 
 .nav-links {
@@ -19,27 +13,29 @@
 }
 
 .home,
-.about{
-    height: 90vh;
+.skills,
+.projects{
     position: absolute;
     width: 100%;
 }
 
 .home-content,
-.about-content {
+.skills-content  {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
 .home {
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    background-color: white;
     }
 
-.about {
-    background-color: #D9AFD9;
-    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+.skills {
+    background-color:white;
+    }
+    
+.projects {
+    background-color:white;
     }
 
 

@@ -5,27 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="./style/style.scss">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <nav>
-        <ul class="nav-list">
-            <li><a class="nav-links" href="index.html">Home</a></li>
-            <li><a class="nav-links" href="trans.html">About</a></li>
-            <li><a class="nav-links" href="#">Projects</a></li>
-        </ul>
+    <nav class="nav-list">
+        <div class="">
+            <div class="flex items-center justify-between w-3/4 m-auto">
+                <a class="align-middle overflow-visible" href="slide-menu.html">
+                    <span class="flex transform rotate-90 hover:-rotate-90 transition-transform duration-1000 ease-out lg:text-3xl border-solid border-4 border-black rounded p-4 font-bold hover:bg-purple-400"> :]</span>
+                </a>            
+                <div class="flex">
+                    <!-- Hover add animate function -->
+                    
+                    <a href="index.html" class="lg:text-1xl sm:text-2xl  text-1xl p-4 transition ease-in duration-300 hover:bg-gray-500  hover:bg-opacity-25"><span class="mr-2 text-purple-600">01.</span><span class="underline">About</span></a>
+                    <a href="skills2.html" class="lg:text-1xl sm:text-2xl  text-1xl p-4 transition ease-in duration-300 hover:bg-gray-500  hover:bg-opacity-25"><span class="mr-2 text-purple-600">02.</span><span>Skills</span></a>
+                    <a href="projects2.html" class="lg:text-1xl sm:text-2xl  text-1xl p-4 transition ease-in duration-300 hover:bg-gray-500  hover:bg-opacity-25"><span class="mr-2 text-purple-600">03.</span><span>Projects</span></a>
+                    <a href="" id="transform" class="lg:text-1xl sm:text-2xl  text-1xl p-4 transition ease-in duration-300 hover:bg-gray-500  hover:bg-opacity-25"><span class="mr-2 text-purple-600">04.</span><span>Contact</span></a>
+                </div>
+            </div>
+        </div>
     </nav>
 
-    <main data-router-wrapper>
+    <main data-router-wrapper class="">
         <section data-router-view="home" class="home">
             <div class="home-content">
-                <div class="home-presentation">
-                <h1>Home transition</h1>
-                <p>Beautoful transition between html pages</p>
+                <div class="home-presentation sm:flex items-center justify-between w-3/4 m-auto">
+ 
+                    <div class="lg:w-1/12"></div>
+                        <div class="w-12/12 lg:w-5/12 p-5 center">
+                            <img src="images/filmol.png" alt="" class="object-cover center rounded-md"> 
+                        </div>
+                        <div class="w-12/12 lg:w-5/12">
+                            <h1 class="lg:text-6xl sm:text-2xl  text-1xl mb-10 ml-5 flex">Hello!<span class="ml-4 flex transform hover:rotate-12 duration-300"> 👋 </span></h1>
+                            <h2 class="lg:text-3xl sm:text-2xl  text-1xl ml-5 center">I'm Filip, a 25-year-old information architecture student @ Malmö University. 
+                             Tech-head, aspiring front-end developer and big pizza lover.</h2>
+                        </div>
+                    <div class="lg:w-1/12"></div>
                 </div>
-                <img src="images/filmol.png" alt="home">
             </div>
+            <div class="progress-bar">
+                <h2 class="center lg:text-2xl sm:text-2xl  text-1xl mb-5 mt-16" id="grad">University studies completed: </h2>
+                <div class="h-4 w-1/6 relative rounded-full overflow-hidden flex m-auto hover:bg-gray-200">
+                    <div class="w-full h-full bg-gray-200 absolute hover:opacity-25"></div>
+                    <div id="bar" class="transition-all ease-out duration-1000 h-full bg-green-500 relative w-0/12"></div>
+                </div>
+            </div>
+
         </section>
     </main>
     <script src="./js/index.js"></script>
+    <script>
+    </script>
 </body>
 </html>
