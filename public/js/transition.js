@@ -26,7 +26,7 @@ let addBar = function(){
     // document.getElementById("grad").innerHTML += "University studies completed: " + completed + "%"
 }
 
-let addProject = function(){
+let addKeys = function(){
     setTimeout(function(){
         var replacers = document.querySelectorAll('[data-replace]');
         for(var i=0; i<replacers.length; i++){
@@ -40,12 +40,10 @@ let addProject = function(){
     }, 1);
 };
 
-
-
 class Fade extends Highway.Transition{
     in({from, to, done}){
     const tl = new TimelineLite();
-    tl.fromTo(to, 0.5, {left:'-100%', top: '50%'}, {left:'0%',})
+    tl.fromTo(to, 0.5, {left:'0%', top: '-100%'}, {top:'10%',})
     .fromTo( 
     to,
     0.5,
@@ -54,9 +52,13 @@ class Fade extends Highway.Transition{
     onComplete: function(){
        if (to.classList.contains("home")) {
            addBar();
+           addKeys();
         } 
        if (to.classList.contains("projects")) {
-           addProject();
+           addKeys();
+        } 
+       if (to.classList.contains("skills")) {
+           addKeys();
         } 
 
        from.remove();
