@@ -10,7 +10,7 @@
 
     <main data-router-wrapper>
         <section data-router-view="skills" class="skills">
-            <div class="skills-content">
+            <div id="container" class="skills-content ease-in-out">
                 <div class="skills-presentation">
                     <h1 class="center font-bold lg:text-3xl sm:text-2xl  text-1xl mt-8">FrontEnd</h1>
                     <div id="skillsContainer" class="w-full sm:w-2/4 m-auto justify-center grid grid-rows-3 sm:grid-rows-2 grid-flow-col">
@@ -25,8 +25,19 @@
                     <h2 class="center font-bold lg:text-3xl sm:text-2xl  text-1xl mt-16">Certificates</h2>
                     <div class="w-10/12 sm:w-2/4 m-auto flex justify-center">
                         <img src="images/Udacity.png" alt="">
-                    </div>                
+                    </div>
                 </div>
+                <a href="index.html" class="w-10 h-10 fixed bottom-6 left-6 delay-700 duration-1000 transform opacity-0 transition-all -translate-x-full" data-replace='{ "-translate-x-full": "-translate-x-0", "opacity-0": "opacity-100" }'>
+                    <svg class="hover:text-purple-600 duration-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </a>
+                 
+                <a href="projects2.html" class="w-10 h-10 fixed bottom-6 right-6 delay-700 duration-1000 transform opacity-0 transition-all translate-x-full" data-replace='{ "translate-x-full": "translate-x-0", "opacity-0": "opacity-100" }'>
+                    <svg class="hover:text-purple-600 duration-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                </a> 
             </div>
         </section>
     </main>
