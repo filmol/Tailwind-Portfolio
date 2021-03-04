@@ -40,13 +40,6 @@ let addKeys = function(){
     }, 1);
 };
 
-let removeUnderline = function(){
-    document.querySelector(".aboutBtn").classList.remove("underline");
-    document.querySelector(".skillsBtn").classList.remove("underline");
-    document.querySelector(".projectsBtn").classList.remove("underline");
-    document.querySelector(".contactBtn").classList.remove("underline");
-}
-
 class Fade extends Highway.Transition{
     in({from, to, done}){
     const tl = new TimelineLite();
@@ -57,39 +50,15 @@ class Fade extends Highway.Transition{
     {height:'0vh'},
     {height:'90vh', top:'10%', 
     onComplete: function(){
-        console.log(to)
-        console.log(to.classList)
        if (to.classList.contains("home")) {
-            addBar();
-            addKeys();
-            removeUnderline();
-            document.querySelector(".aboutBtn").classList.add("underline");
-            
-            // Wave func
-            let wave = document.querySelector(".wave");
-            setTimeout(letsWave,3000)
-
-            function removeRotate() {
-                wave.classList.remove("rotate-12");
-            } 
-            function letsWave() {
-                wave.classList.add("rotate-12");
-                setTimeout(removeRotate,300)
-            }
+           addBar();
+           addKeys();
         } 
        if (to.classList.contains("projects")) {
-            addKeys();
-            removeUnderline();
-            document.querySelector(".projectsBtn").classList.add("underline");
+           addKeys();
         } 
        if (to.classList.contains("skills")) {
-            addKeys();
-            removeUnderline();
-            document.querySelector(".skillsBtn").classList.add("underline");
-        }        
-        if (to.classList.contains("contact")) {
-            removeUnderline();  
-            document.querySelector(".contactBtn").classList.add("underline");
+           addKeys();
         } 
 
        from.remove();
@@ -103,7 +72,6 @@ class Fade extends Highway.Transition{
         done();
     }
 }
-
 
 
 export default Fade;

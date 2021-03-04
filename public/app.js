@@ -69,3 +69,7 @@ function letsWave() {
     wave.classList.add("rotate-12");
     setTimeout(removeRotate,300)
 }
+
+
+var active = document.querySelector(".active")
+active.classList.add("underline")

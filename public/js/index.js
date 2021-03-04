@@ -46,24 +46,11 @@ let addProject = function(){
     }, 1);
 };
 
-let waves = function(){
-let wave = document.querySelector(".wave");
-setTimeout(letsWave,3000)
 
-function removeRotate() {
-    wave.classList.remove("rotate-12");
-} 
-function letsWave() {
-    wave.classList.add("rotate-12");
-    setTimeout(removeRotate,300)
-}}
-
-document.addEventListener("DOMContentLoaded", function(){
-    addBar();  
-    addProject();
-    waves();
-});
-
+    document.addEventListener("DOMContentLoaded", function(){
+        addBar();  
+        addProject();
+    });
 
       // document.getElementById("grad").innerHTML += " " + daysLeft + " days"
       //   document.getElementById("grad").innerHTML += "University studies completed: " + completed + "%"
