@@ -5930,6 +5930,55 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
+var addBar = function addBar() {
+  var progress = 0;
+  var invervalSpeed = 1;
+  var incrementSpeed = 0.4;
+  var todaysDate = new Date();
+  var graduationDay = new Date("June 30, 2022");
+  var msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
+
+  var daysLeft = (graduationDay.getTime() - todaysDate.getTime()) / msPerDay;
+  daysLeft = Math.round(daysLeft);
+  var completed = (1060 - daysLeft) / 1060 * 100;
+  completed = completed.toFixed(0);
+  var bar = document.getElementById('bar');
+  var progressInterval = setInterval(function () {
+    progress += incrementSpeed;
+    bar.style.width = progress + "%";
+
+    if (progress >= completed) {
+      clearInterval(progressInterval);
+    }
+  }, invervalSpeed); // document.getElementById("grad").innerHTML += "University studies completed: " + completed + "%"
+};
+
+var addKeys = function addKeys() {
+  setTimeout(function () {
+    var replacers = document.querySelectorAll('[data-replace]');
+
+    var _loop = function _loop() {
+      console.log('hit here2');
+      var replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
+      Object.keys(replaceClasses).forEach(function (key) {
+        replacers[i].classList.remove(key);
+        replacers[i].classList.add(replaceClasses[key]);
+      });
+    };
+
+    for (var i = 0; i < replacers.length; i++) {
+      _loop();
+    }
+  }, 1);
+};
+
+var removeUnderline = function removeUnderline() {
+  document.querySelector(".aboutBtn").classList.remove("underline");
+  document.querySelector(".skillsBtn").classList.remove("underline");
+  document.querySelector(".projectsBtn").classList.remove("underline");
+  document.querySelector(".contactBtn").classList.remove("underline");
+};
+
 var Fade = /*#__PURE__*/function (_Highway$Transition) {
   _inherits(Fade, _Highway$Transition);
 
@@ -5949,20 +5998,60 @@ var Fade = /*#__PURE__*/function (_Highway$Transition) {
           done = _ref.done;
       var tl = new _gsap.TimelineLite();
       tl.fromTo(to, 0.5, {
-        left: '-100%',
-        top: '50%'
+        left: '0%',
+        top: '-100%'
       }, {
-        left: '0%'
+        top: '10%'
       }).fromTo(to, 0.5, {
-        height: '2vh'
+        height: '0vh'
       }, {
         height: '90vh',
         top: '10%',
         onComplete: function onComplete() {
+          if (to.classList.contains("home")) {
+            addBar();
+            addKeys();
+            removeUnderline();
+            document.querySelector(".aboutBtn").classList.add("underline"); // Wave func
+
+            var wave = document.querySelector(".wave");
+            setTimeout(letsWave, 3000);
+
+            function removeRotate() {
+              wave.classList.remove("rotate-12");
+            }
+
+            function letsWave() {
+              wave.classList.add("rotate-12");
+              setTimeout(removeRotate, 300);
+            }
+          }
+
+          if (to.classList.contains("projects")) {
+            addKeys();
+            removeUnderline();
+            document.querySelector(".projectsBtn").classList.add("underline");
+          }
+
+          if (to.classList.contains("skills")) {
+            addKeys();
+            removeUnderline();
+            document.querySelector(".skillsBtn").classList.add("underline");
+          }
+
+          if (to.classList.contains("contact")) {
+            removeUnderline();
+            document.querySelector(".contactBtn").classList.add("underline");
+          }
+
           from.remove();
           done();
         }
       }).fromTo(to.children[0], 2, {
+        opacity: 0
+      }, {
+        opacity: 1
+      }).fromTo(to.children[1], 2, {
         opacity: 0
       }, {
         opacity: 1
@@ -5996,6 +6085,68 @@ var H = new _highway.default.Core({
     default: _transition.default
   }
 });
+
+var addBar = function addBar() {
+  var progress = 0;
+  var invervalSpeed = 1;
+  var incrementSpeed = 0.4;
+  var todaysDate = new Date();
+  var graduationDay = new Date("June 30, 2022");
+  var msPerDay = 24 * 60 * 60 * 1000; // Number of milliseconds per day
+
+  var daysLeft = (graduationDay.getTime() - todaysDate.getTime()) / msPerDay;
+  daysLeft = Math.round(daysLeft);
+  var completed = (1060 - daysLeft) / 1060 * 100;
+  completed = completed.toFixed(0);
+  var bar = document.getElementById('bar');
+  var progressInterval = setInterval(function () {
+    progress += incrementSpeed;
+    bar.style.width = progress + "%";
+
+    if (progress >= completed) {
+      clearInterval(progressInterval);
+    }
+  }, invervalSpeed); // document.getElementById("grad").innerHTML += "University studies completed: " + completed + "%"
+};
+
+var addProject = function addProject() {
+  setTimeout(function () {
+    var replacers = document.querySelectorAll('[data-replace]');
+
+    var _loop = function _loop() {
+      console.log('hit here2');
+      var replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
+      Object.keys(replaceClasses).forEach(function (key) {
+        replacers[i].classList.remove(key);
+        replacers[i].classList.add(replaceClasses[key]);
+      });
+    };
+
+    for (var i = 0; i < replacers.length; i++) {
+      _loop();
+    }
+  }, 1);
+};
+
+var waves = function waves() {
+  var wave = document.querySelector(".wave");
+  setTimeout(letsWave, 3000);
+
+  function removeRotate() {
+    wave.classList.remove("rotate-12");
+  }
+
+  function letsWave() {
+    wave.classList.add("rotate-12");
+    setTimeout(removeRotate, 300);
+  }
+};
+
+document.addEventListener("DOMContentLoaded", function () {
+  addBar();
+  addProject();
+  waves();
+});
 },{"@dogstudio/highway":"../node_modules/@dogstudio/highway/build/highway.module.js","./transition":"js/transition.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -6024,7 +6175,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55613" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49229" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
