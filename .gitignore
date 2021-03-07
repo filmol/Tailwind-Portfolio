@@ -22,6 +22,10 @@ public/dist
 .idea/
 .vscode/
 *.sw*
+public/.cache
+public/.cache/
+public/dist/
+public/dist
 public/.cache/05/34befc9e2c63682f8e5470b332259d.json
 public/.cache/09/60f25835664ad8a55f463b8a85c764.json
 public/.cache/0c/8059e707600f2513f168f993f1d5f0.json
@@ -33,3 +37,6 @@ public/.cache/8c/064a5d1c1db798ff60afebc53ac0c6.json
 public/.cache/9f/07c76b67043a61dc3b0ada5ce1aafc.json
 public/.cache/eb/4a9b27197f1851a877fb9c29a1bc95.json
 public/.cache/fc/d3da29ff63748a82a476d8f5c478bd.json
+public/dist/js.00a46daa.js
+public/.cache/fb/3f0188985d0e6bf6e3acac87bd6652.json
+public/dist/style.e0c02e61.jss
