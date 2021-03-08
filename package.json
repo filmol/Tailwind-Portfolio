@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build src/styles.css -o public/styles.css"
+    "build-css": "tailwindcss build src/styles.css -o public/styles.css",
+    "build": "parcel build public/index.html"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
     "tailwindcss": "^2.0.3"
   },
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "sass": "^1.32.8"
   },
   "repository": {
