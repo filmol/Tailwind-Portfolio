@@ -4,27 +4,26 @@
   "main": "index.js",
   "scripts": {
     "build-css": "tailwindcss build src/styles.css -o public/styles.css",
-    "build": "parcel build public/index.html"
+    "build": "parcel build public/index.html",
+    "start": "parcel public/index.html"
   },
   "keywords": [],
-  "author": "",
+  "author": "Filip-M <<filip.moltzer@gmail.com>>",
   "license": "ISC",
   "dependencies": {
     "@dogstudio/highway": "^2.2.1",
     "autoprefixer": "^10.2.4",
     "gsap": "^3.6.0",
-    "parcel-bundler": "^1.12.4",
     "postcss": "^8.2.5",
     "tailwindcss": "^2.0.3"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
+    "parcel": "^2.0.0-beta.1",
+    "parcel-bundler": "^1.12.3",
     "sass": "^1.32.8"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/filmol/Tailwind-Portfolio.git"
-  },
+  "repository": "git+https://github.com/filmol/Tailwind-Portfolio.git",
   "bugs": {
     "url": "https://github.com/filmol/Tailwind-Portfolio/issues"
   },
