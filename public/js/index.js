@@ -7,6 +7,33 @@ const H = new Highway.Core({
     }
 });
 
+// Hambuger menu NEW
+var mobileBtn = document.querySelector("#mobileBtn");
+mobileBtn.addEventListener("click", showMenu, false);
+var blurContent = document.querySelector("#container");
+var navList = document.querySelector(".nav-list");
+var navWidth = document.querySelector("#nav-width");
+var mobileMenu = document.querySelector("#mobileMenu");
+mobileMenu.addEventListener("click", hideMenu, false);
+
+function showMenu(e) {
+    blurContent.classList.add("blur")
+    // TRY MORE SPECIFIC? Like if projects, add blur to projects
+    navList.classList.add("h-60")
+    navWidth.classList.remove("w-3/4")
+    mobileMenu.classList.remove("hidden")
+}
+
+function hideMenu(e) {
+    console.log("HIDE")
+    blurContent.classList.remove("blur")
+    navList.classList.remove("h-60")
+    navWidth.classList.add("w-3/4")
+    mobileMenu.classList.add("hidden")
+    e.stopPropagation();
+}   
+
+
 let addBar = function(){
 
     let progress = 0;
