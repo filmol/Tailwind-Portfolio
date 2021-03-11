@@ -79,7 +79,7 @@ class Fade extends Highway.Transition{
        if (to.classList.contains("projects")) {
             addKeys();
             removeUnderline();
-            document.querySelector(".projectsBtn").classList.add("underline");        
+            document.querySelector(".projectsBtn").classList.add("underline");
         } 
        if (to.classList.contains("skills")) {
             addKeys();
