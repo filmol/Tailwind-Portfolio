@@ -7,6 +7,14 @@ const H = new Highway.Core({
     }
 });
 
+// Scroll to Top
+let topFunction = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+var TopBtn = document.querySelector("#top-function");
+TopBtn.addEventListener("click", topFunction);
+
 // Hambuger menu NEW
 var mobileBtn = document.querySelector("#mobileBtn");
 mobileBtn.addEventListener("click", showMenu, false);
@@ -89,13 +97,3 @@ let waves = function(){
         addProject();
         waves();
     });
-
-
-// Scroll to Top
-let topFunction = function() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-
-var TopBtn = document.querySelector("#top-function");
-TopBtn.addEventListener("click", topFunction);
