@@ -16,10 +16,6 @@ var navWidth = document.querySelector("#nav-width");
 var mobileMenu = document.querySelector("#mobileMenu");
 mobileMenu.addEventListener("click", hideMenu, false);
 
-// Scroll to Top
-var TopBtn = document.querySelector("#top-function");
-TopBtn.addEventListener("click", topFunction);
-
 
 function showMenu(e) {
     navList.classList.add("h-96")
@@ -94,7 +90,12 @@ let waves = function(){
         waves();
     });
 
+
+// Scroll to Top
 let topFunction = function() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+var TopBtn = document.querySelector("#top-function");
+TopBtn.addEventListener("click", topFunction);
