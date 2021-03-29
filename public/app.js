@@ -1,33 +1,3 @@
-// // Hambuger old
-// var hambugerIcon = document.querySelector("#hambugerIcon");
-// hambugerIcon.addEventListener("click", showMenu, false);
-
-// var flyoutMenu = document.querySelector("#flyoutMenu");
-// flyoutMenu.addEventListener("click", hideMenu, false);
-
-// var container = document.querySelector("#container");
-
-// function showMenu(e) {
-//     flyoutMenu.classList.remove("-translate-y-full");
-//     container.classList.add("blur");
-
-//     console.log("Hej")
-//     // document.body.style.overflow = "hidden";
-
-// }
-
-// function hideMenu(e) {
-//     flyoutMenu.classList.add("-translate-y-full");
-//     container.classList.remove("blur");
-//     e.stopPropagation();
-
-//     // document.body.style.overflow = "auto";
-// }   
-
-// // Auto load aboutme when doc loaded
-// document.addEventListener("DOMContentLoaded", function(){
-//     setTimeout(function(){ showAbout(); }, 500);
-// });
 
 // About page rendering
 var aboutIcon = document.querySelector("#aboutIcon");
