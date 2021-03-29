@@ -16,6 +16,11 @@ var navWidth = document.querySelector("#nav-width");
 var mobileMenu = document.querySelector("#mobileMenu");
 mobileMenu.addEventListener("click", hideMenu, false);
 
+// Scroll to Top
+var TopBtn = document.querySelector("#top-function");
+TopBtn.addEventListener("click", topFunction);
+
+
 function showMenu(e) {
     navList.classList.add("h-96")
     blurContent.classList.add("blur")
@@ -33,7 +38,6 @@ function hideMenu(e) {
 
 
 let addBar = function(){
-
     let progress = 0;
     let invervalSpeed = 1;
     let incrementSpeed = 0.4;
@@ -89,3 +93,8 @@ let waves = function(){
         addProject();
         waves();
     });
+
+let topFunction = function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
