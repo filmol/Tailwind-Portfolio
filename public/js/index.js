@@ -27,6 +27,7 @@ mobileMenu.addEventListener("click", hideMenu, false);
 
 
 function showMenu(e) {
+    console.log("menu showing")
     navList.classList.add("h-96")
     blurContent.classList.add("blur")
     navWidth.classList.remove("w-3/4")
