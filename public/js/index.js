@@ -9,6 +9,7 @@ const H = new Highway.Core({
 
 // Scroll to Top
 let topFunction = function() {
+    console.log("topfunc activated")
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
