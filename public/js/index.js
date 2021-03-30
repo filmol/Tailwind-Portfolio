@@ -20,6 +20,7 @@ TopBtn.addEventListener("click", topFunction);
 var mobileBtn = document.querySelector("#mobileBtn");
 mobileBtn.addEventListener("click", showMenu, false);
 var blurContent = document.querySelector(".blur-content");
+var mainContent = document.querySelector("#main-container");
 var navList = document.querySelector(".nav-list");
 var navWidth = document.querySelector("#nav-width");
 var mobileMenu = document.querySelector("#mobileMenu");
@@ -29,16 +30,20 @@ mobileMenu.addEventListener("click", hideMenu, false);
 function showMenu(e) {
     console.log("menu showing")
     navList.classList.add("h-96")
+    navList.classList.add("absolute")
     blurContent.classList.add("blur")
     navWidth.classList.remove("w-3/4")
     mobileMenu.classList.remove("hidden")
+    mainContent.classList.add("relative")
 }
 
 function hideMenu(e) {
     navList.classList.remove("h-96")
+    navList.classList.remove("absolute")
     navWidth.classList.add("w-3/4")
     mobileMenu.classList.add("hidden")
     blurContent.classList.remove("blur")
+    mainContent.classList.remove("relative")
     e.stopPropagation();
 }   
 
