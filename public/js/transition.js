@@ -84,6 +84,7 @@ class Fade extends Highway.Transition{
         } 
 
         if (to.classList.contains("contact")) {
+            addKeys();
             removeUnderline();  
             document.querySelector(".contactBtn").classList.add("underline");
         }
