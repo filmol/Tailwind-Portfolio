@@ -48,12 +48,12 @@ let removeUnderline = function(){
 class Fade extends Highway.Transition{
     in({from, to, done}){
     const tl = new TimelineLite();
-    tl.fromTo(to, 0.5, {left:'0%', top: '-100%'}, {top:'4rem',})
+    tl.fromTo(to, 0.5, {left:'0%', top: '-100%'}, {top:'5rem',})
     .fromTo( 
     to,
     0.5,
     {height:'0vh'},
-    {height:'90vh', top:'4rem', 
+    {height:'90vh', top:'5rem', 
     onComplete: function(){
        if (to.classList.contains("home")) {
            addBar();
