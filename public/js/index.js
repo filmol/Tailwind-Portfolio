@@ -8,6 +8,17 @@ const H = new Highway.Core({
 });
 
 
+
+document.addEventListener('scroll', function(e) {
+    if (window.scrollY > 300) {
+        topBtn.classList.remove("hidden")
+    }
+    else {
+        topBtn.classList.add("hidden")
+    }
+})
+
+
 // Hambuger menu NEW
 var mobileBtn = document.querySelector("#mobileBtn");
 mobileBtn.addEventListener("click", showMenu, false);

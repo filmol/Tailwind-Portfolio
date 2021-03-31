@@ -59,8 +59,7 @@ class Fade extends Highway.Transition{
            addBar();
            addKeys();
            removeUnderline();
-           document.querySelector(".aboutBtn").classList.add("underline");
-           
+           document.querySelector(".aboutBtn").classList.add("underline");           
            // Wave func
            let wave = document.querySelector(".wave");
            setTimeout(letsWave,3000)
