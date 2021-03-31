@@ -2,7 +2,6 @@ import Highway from '@dogstudio/highway';
 import {TimelineLite} from 'gsap';
 
 let addBar = function(){
-
     let progress = 0;
     let invervalSpeed = 1;
     let incrementSpeed = 0.4;
@@ -22,15 +21,13 @@ let addBar = function(){
             clearInterval(progressInterval);
         }
     }, invervalSpeed);
-
-    // document.getElementById("grad").innerHTML += "University studies completed: " + completed + "%"
 }
 
 let addKeys = function(){
     setTimeout(function(){
         var replacers = document.querySelectorAll('[data-replace]');
         for(var i=0; i<replacers.length; i++){
-            console.log('hit here2');
+            console.log('data replaced');
             let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
             Object.keys(replaceClasses).forEach(function(key) {
                 replacers[i].classList.remove(key);

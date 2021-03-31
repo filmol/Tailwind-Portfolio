@@ -7,18 +7,12 @@ const H = new Highway.Core({
     }
 });
 
-// Scroll to Top
-let topFunction = function() {
-    console.log("topfunc activated")
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
-}
-var TopBtn = document.querySelector("#top-function");
-TopBtn.addEventListener("click", topFunction);
 
 // Hambuger menu NEW
 var mobileBtn = document.querySelector("#mobileBtn");
 mobileBtn.addEventListener("click", showMenu, false);
+var topBtn = document.querySelector("#top-function");
+topBtn.addEventListener("click", TOP, false);
 var blurContent = document.querySelector(".blur-content");
 var mainContent = document.querySelector("#main-container");
 var navList = document.querySelector(".nav-list");
@@ -26,6 +20,12 @@ var navWidth = document.querySelector("#nav-width");
 var mobileMenu = document.querySelector("#mobileMenu");
 mobileMenu.addEventListener("click", hideMenu, false);
 
+// Scroll to Top
+function TOP() {
+    console.log("topfunc activated")
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
 function showMenu(e) {
     console.log("menu showing")
@@ -76,7 +76,7 @@ let addProject = function(){
     setTimeout(function(){
         var replacers = document.querySelectorAll('[data-replace]');
         for(var i=0; i<replacers.length; i++){
-            console.log('hit here2');
+            console.log('replaces data');
             let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
             Object.keys(replaceClasses).forEach(function(key) {
                 replacers[i].classList.remove(key);

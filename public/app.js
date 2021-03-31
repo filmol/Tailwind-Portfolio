@@ -1,4 +1,3 @@
-
 // About page rendering
 var aboutIcon = document.querySelector("#aboutIcon");
 aboutIcon.addEventListener("click", showAbout, false);
