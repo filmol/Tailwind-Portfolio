@@ -89,8 +89,11 @@ class Fade extends Highway.Transition{
             document.querySelector(".contactBtn").classList.add("underline");
         }
         
-       from.remove();
-       done(); 
+        //scroll to top as default for each page
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+        from.remove();
+        done(); 
     }}
     )
     .fromTo(to.children[0], 2, {opacity: 0},{opacity: 1})
