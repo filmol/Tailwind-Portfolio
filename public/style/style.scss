@@ -3,7 +3,11 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
+    
+html {
+    scroll-behavior: smooth;
+  }
+  
 .nav-list {
     height: 10vh;
 }
@@ -18,19 +22,9 @@
 .contact {
     position: absolute;
     width: 100%;
-}
-
-.home,
-.skills,
-.projects,
-.contact {
     background-color:white;
-    }
+}
 
 .blur {
     filter: blur(3px);  
 }
-    
-html {
-    scroll-behavior: smooth;
-  }

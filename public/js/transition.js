@@ -2,6 +2,7 @@ import Highway from '@dogstudio/highway';
 import {TimelineLite} from 'gsap';
 
 let addBar = function(){
+    // Animates and fills up the university progress bar gradually.
     let progress = 0;
     let invervalSpeed = 1;
     let incrementSpeed = 0.4;
@@ -24,6 +25,7 @@ let addBar = function(){
 }
 
 let addKeys = function(){
+    // Animation that slides in the projects name when loaded.
     setTimeout(function(){
         var replacers = document.querySelectorAll('[data-replace]');
         for(var i=0; i<replacers.length; i++){
@@ -37,7 +39,6 @@ let addKeys = function(){
     }, 1);
 };
 
-
 let removeUnderline = function(){
     document.querySelector(".aboutBtn").classList.remove("underline");
     document.querySelector(".skillsBtn").classList.remove("underline");
@@ -46,6 +47,7 @@ let removeUnderline = function(){
 }
 
 class Fade extends Highway.Transition{
+    // Animation to change between subpages without reload the doc, also includes an added animation transition.
     in({from, to, done}){
     const tl = new TimelineLite();
     tl.fromTo(to, 0.5, {left:'0%', top: '-100%'}, {top:'5rem',})
@@ -89,9 +91,10 @@ class Fade extends Highway.Transition{
             document.querySelector(".contactBtn").classList.add("underline");
         }
         
-        //scroll to top as default for each page
+        //Scroll to top as default for each page
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
+
         from.remove();
         done(); 
     }}
@@ -104,5 +107,8 @@ class Fade extends Highway.Transition{
     }
 }
 
+document.addEventListener("DOMContentLoaded", function(){
+    Fade.onComplete
+});
 
 export default Fade;
