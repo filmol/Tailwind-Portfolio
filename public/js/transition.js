@@ -57,7 +57,7 @@ class Fade extends Highway.Transition{
     {height:'0vh'},
     {height:'90vh', top:'5rem', 
     onComplete: function(){
-       if (to.classList.contains("home")) {
+        if (to.classList.contains("home")) {
            addBar();
            addKeys();
            removeUnderline();
@@ -74,16 +74,16 @@ class Fade extends Highway.Transition{
                setTimeout(removeRotate,300)
            }
         } 
-       if (to.classList.contains("projects")) {
-            addKeys();
-            removeUnderline();
-            document.querySelector(".projectsBtn").classList.add("underline");
-        } 
-       if (to.classList.contains("skills")) {
-            addKeys();
-            removeUnderline();
-            document.querySelector(".skillsBtn").classList.add("underline");
-        } 
+        if (to.classList.contains("projects")) {
+                addKeys();
+                removeUnderline();
+                document.querySelector(".projectsBtn").classList.add("underline");
+            } 
+        if (to.classList.contains("skills")) {
+                addKeys();
+                removeUnderline();
+                document.querySelector(".skillsBtn").classList.add("underline");
+            } 
 
         if (to.classList.contains("contact")) {
             addKeys();
@@ -107,8 +107,5 @@ class Fade extends Highway.Transition{
     }
 }
 
-document.addEventListener("DOMContentLoaded", function(){
-    Fade.onComplete
-});
 
 export default Fade;
