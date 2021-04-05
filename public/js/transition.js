@@ -1,34 +1,49 @@
 import Highway from '@dogstudio/highway';
 import {TimelineLite} from 'gsap';
 
-let addBar = function(){
+export const addBar = function(){
     // Animates and fills up the university progress bar gradually.
     let progress = 0;
-    let invervalSpeed = 1;
-    let incrementSpeed = 0.4;
-    let todaysDate = new Date()
-    let graduationDay = new Date("June 30, 2022")
-    let msPerDay = 24 * 60 * 60 * 1000 ; // Number of milliseconds per day
-    let daysLeft = (graduationDay.getTime() - todaysDate.getTime()) / msPerDay;
+    const graduationDay = new Date("June 30, 2022")
+    const msPerDay = 24 * 60 * 60 * 1000 ; // amount of milliseconds/day
+    let daysLeft = (graduationDay.getTime() - new Date().getTime()) / msPerDay;
     daysLeft = Math.round(daysLeft);
     let completed = ((1060-daysLeft)/1060)*100
     completed = completed.toFixed(0)
 
-    let bar = document.getElementById('bar');
+    const bar = document.getElementById('bar');
     let progressInterval = setInterval(function(){
-        progress += incrementSpeed;
+        progress += 0.4;
         bar.style.width = progress + "%";
         if(progress >= completed){
             clearInterval(progressInterval);
         }
-    }, invervalSpeed);
+    }, 8);
 }
 
-let addKeys = function(){
+export const waves = function(){
+    // Hand animation that waves once the document is loaded.
+    const wave = document.querySelector(".wave");
+    setTimeout(letsWave,3000)
+   
+    const removeRotate = () => wave.classList.remove("rotate-12");
+
+    function letsWave() {
+    wave.classList.add("rotate-12");
+        setTimeout(removeRotate,300)
+    }}
+
+export const top = function () {
+        // Scrolls back to navigation top
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+const addKeys = function(){
     // Animation that slides in the projects name when loaded.
     setTimeout(function(){
-        var replacers = document.querySelectorAll('[data-replace]');
-        for(var i=0; i<replacers.length; i++){
+        const replacers = document.querySelectorAll('[data-replace]');
+        for(let i=0; i<replacers.length; i++){
             console.log('data replaced');
             let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
             Object.keys(replaceClasses).forEach(function(key) {
@@ -37,9 +52,9 @@ let addKeys = function(){
             });
         }
     }, 1);
-};
+}
 
-let removeUnderline = function(){
+const removeUnderline = function(){
     document.querySelector(".aboutBtn").classList.remove("underline");
     document.querySelector(".skillsBtn").classList.remove("underline");
     document.querySelector(".projectsBtn").classList.remove("underline");
@@ -47,7 +62,7 @@ let removeUnderline = function(){
 }
 
 class Fade extends Highway.Transition{
-    // Animation to change between subpages without reload the doc, also includes an added animation transition.
+    // Animation to change between subpages without reloading the doc, also includes an added animation transition.
     in({from, to, done}){
     const tl = new TimelineLite();
     tl.fromTo(to, 0.5, {left:'0%', top: '-100%'}, {top:'5rem',})
@@ -58,33 +73,22 @@ class Fade extends Highway.Transition{
     {height:'90vh', top:'5rem', 
     onComplete: function(){
         if (to.classList.contains("home")) {
-           addBar();
-           addKeys();
-           removeUnderline();
-           document.querySelector(".aboutBtn").classList.add("underline");           
-           // Wave func
-           let wave = document.querySelector(".wave");
-           setTimeout(letsWave,3000)
-
-           function removeRotate() {
-               wave.classList.remove("rotate-12");
-           } 
-           function letsWave() {
-               wave.classList.add("rotate-12");
-               setTimeout(removeRotate,300)
-           }
+            setTimeout(addBar,3000)
+            addKeys();
+            removeUnderline();
+            document.querySelector(".aboutBtn").classList.add("underline");           
+            waves();
         } 
         if (to.classList.contains("projects")) {
-                addKeys();
-                removeUnderline();
-                document.querySelector(".projectsBtn").classList.add("underline");
+            addKeys();
+            removeUnderline();
+            document.querySelector(".projectsBtn").classList.add("underline");
             } 
         if (to.classList.contains("skills")) {
-                addKeys();
-                removeUnderline();
-                document.querySelector(".skillsBtn").classList.add("underline");
+            addKeys();
+            removeUnderline();
+            document.querySelector(".skillsBtn").classList.add("underline");
             } 
-
         if (to.classList.contains("contact")) {
             addKeys();
             removeUnderline();
@@ -92,8 +96,7 @@ class Fade extends Highway.Transition{
         }
         
         //Scroll to top as default for each page
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
+        top();
 
         from.remove();
         done(); 
@@ -106,6 +109,5 @@ class Fade extends Highway.Transition{
         done();
     }
 }
-
 
 export default Fade;
