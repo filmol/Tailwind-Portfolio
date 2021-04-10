@@ -163,8 +163,8 @@ const addListener = function() {
 
 function addActive(lang) {
     let active = document.querySelector(".active");
-    active.classList.remove("active", "bg-purple-400");
-    lang.classList.add("active", "bg-purple-400");
+    active.classList.remove("active", "bg-purple-200");
+    lang.classList.add("active", "bg-purple-200");
 };
 
 
