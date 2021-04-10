@@ -61,6 +61,113 @@ const removeUnderline = function(){
     document.querySelector(".contactBtn").classList.remove("underline");
 }
 
+const showProjects = function() {
+    // Displays all projects with .show in classlist
+    const projectList = document.querySelectorAll(".show");
+    for (let i = 0; i < projectList.length; i++) {
+        projectList[i].classList.add("block", "sm:flex"); 
+        projectList[i].classList.remove("sm:hidden", "hidden");
+        if (i%2>0) {
+            projectList[i].classList.add("sm:-translate-x-36");
+        }
+        else {                 
+            projectList[i].classList.add("sm:translate-x-36");
+        }
+    }
+}
+
+let firstVisit = true
+const resetSort = function() {
+    // Resets to default value, or displays all projects if firstVisit
+   
+    const project = document.querySelectorAll(".project");
+    
+    //hide all projects
+    for (let i = 0; i < project.length; i++) {
+        console.log(project[i]);
+        project[i].classList.add("sm:hidden", "hidden");
+        project[i].classList.remove("sm:-translate-x-36","sm:translate-x-36");
+        project[i].classList.remove("show");
+    }
+
+    //Display all (if firstvisit)
+    if (firstVisit == true) {
+        for (let i = 0; i < project.length; i++) {
+            console.log(project[i]);
+            project[i].classList.add("show");
+        }
+        firstVisit = false;
+        showProjects();
+    }
+} 
+
+const sort = function(type) {
+    // Adds the .show class to all projects that matches the language value of "type".
+
+    if (type == "all") {
+        firstVisit = true;
+        resetSort();
+    }
+
+    else {
+        resetSort();
+        const langs = document.querySelectorAll(".lang-used");
+        for (let i = 0; i < langs.length; i++) {
+
+            const children = langs[i].childElementCount;
+
+            for (let x = 0; x < children; x++) {
+
+                if (langs[i].children[x].nodeName == "DIV") {
+                    switch(type) {
+                        case langs[i].children[x].firstChild.alt:
+                            let projectContainer = langs[i].children[x].parentElement.parentElement.parentElement;
+                            projectContainer.classList.add("show"); 
+                            break;
+                        default:
+                            break;
+                    }
+                }
+            }          
+        }
+    }
+    showProjects();
+}
+
+const addListener = function() {
+    firstVisit = true;
+    resetSort();
+
+    const js = document.querySelector("#javascript");
+    const sql = document.querySelector("#sql");
+    const py = document.querySelector("#python");
+    const all = document.querySelector("#all");
+
+    all.addEventListener('click', function () {
+        addActive(this);
+        sort("all");
+    })
+    js.addEventListener('click', function () {
+        addActive(this);
+        sort("js");
+    })
+    sql.addEventListener('click', function () {
+        addActive(this);
+        sort("sql");
+    })
+    py.addEventListener('click', function () {
+        addActive(this);
+        sort("python");
+    })
+}
+
+function addActive(lang) {
+    let active = document.querySelector(".active");
+    active.classList.remove("active", "bg-purple-400");
+    lang.classList.add("active", "bg-purple-400");
+};
+
+
 class Fade extends Highway.Transition{
     // Animation to change between subpages without reloading the doc, also includes an added animation transition.
     in({from, to, done}){
@@ -83,6 +190,7 @@ class Fade extends Highway.Transition{
             addKeys();
             removeUnderline();
             document.querySelector(".projectsBtn").classList.add("underline");
+            addListener();
             } 
         if (to.classList.contains("skills")) {
             addKeys();
