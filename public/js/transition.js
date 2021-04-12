@@ -182,25 +182,25 @@ class Fade extends Highway.Transition{
         if (to.classList.contains("home")) {
             setTimeout(addBar,3000)
             addKeys();
-            removeUnderline();
-            document.querySelector(".aboutBtn").classList.add("underline");           
+            document.querySelector("#nav-underline").classList.remove("margin-contact","margin-about","margin-skills", "margin-projects");           
+            document.querySelector("#nav-underline").classList.add("margin-about");           
             waves();
         } 
         if (to.classList.contains("projects")) {
             addKeys();
-            removeUnderline();
-            document.querySelector(".projectsBtn").classList.add("underline");
+            document.querySelector("#nav-underline").classList.remove("margin-contact","margin-about","margin-skills", "margin-projects");           
+            document.querySelector("#nav-underline").classList.add("margin-projects");
             addListener();
             } 
         if (to.classList.contains("skills")) {
             addKeys();
-            removeUnderline();
-            document.querySelector(".skillsBtn").classList.add("underline");
+            document.querySelector("#nav-underline").classList.remove("margin-contact","margin-about","margin-skills", "margin-projects");           
+            document.querySelector("#nav-underline").classList.add("margin-skills");
             } 
         if (to.classList.contains("contact")) {
             addKeys();
-            removeUnderline();
-            document.querySelector(".contactBtn").classList.add("underline");
+            document.querySelector("#nav-underline").classList.remove("margin-contact","margin-about","margin-skills", "margin-projects");           
+            document.querySelector("#nav-underline").classList.add("margin-contact");
         }
         
         //Scroll to top as default for each page
