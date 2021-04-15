@@ -10,7 +10,7 @@ const H = new Highway.Core({
     }
 });
 
-// Hambuger menu variabels & EventListeners
+// Variabels and functions for mobile menu
 const mobileBtn = document.querySelector("#mobile-btn");
 mobileBtn.addEventListener("click", showMenu, false);
 const topBtn = document.querySelector("#top-function");
@@ -21,8 +21,6 @@ const navList = document.querySelector(".nav-list");
 const navWidth = document.querySelector("#nav-width");
 const mobileMenu = document.querySelector("#mobile-menu");
 mobileMenu.addEventListener("click", hideMenu, false);
-const sortBtn = document.querySelector("#sort-btn");
-
 
 function showMenu(e) {
     navList.classList.add("h-96", "absolute")
@@ -45,7 +43,6 @@ document.addEventListener('scroll', function(e) {
     //Displays top-arrow if scroll is below 300.
     window.scrollY > 300 ? topBtn.classList.remove("hidden") : topBtn.classList.add("hidden");
 })
-
 
 //Displays progress bar and waves when content is loaded.
 document.addEventListener("DOMContentLoaded", () => addBar(), waves());
