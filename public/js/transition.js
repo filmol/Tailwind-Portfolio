@@ -1,5 +1,8 @@
 import Highway from '@dogstudio/highway';
 import {TimelineLite} from 'gsap';
+import {gsap} from 'gsap';
+
+gsap.config({nullTargetWarn: false});
 
 export const addBar = function(){
     // Animates and fills up the university progress bar gradually.
@@ -44,7 +47,6 @@ const addKeys = function(){
     setTimeout(function(){
         const replacers = document.querySelectorAll('[data-replace]');
         for(let i=0; i<replacers.length; i++){
-            console.log('data replaced');
             let replaceClasses = JSON.parse(replacers[i].dataset.replace.replace(/'/g, '"'));
             Object.keys(replaceClasses).forEach(function(key) {
                 replacers[i].classList.remove(key);
@@ -57,12 +59,9 @@ const addKeys = function(){
 const removeUnderline = function(){
     document.querySelector(".aboutBtn").classList.remove("underline");
     document.querySelector(".skillsBtn").classList.remove("underline");
-    document.querySelector(".projectsBtn").classList.remove("underline");
-    document.querySelector(".contactBtn").classList.remove("underline");
-}
-
 const showProjects = function() {
-    // Displays all projects with .show in classlist
+    // Displays all projects with .show in classlist,
+    // Transforms every other project into a slightly hortisonally displaced position with tailwind classes.
     const projectList = document.querySelectorAll(".show");
     for (let i = 0; i < projectList.length; i++) {
         projectList[i].classList.add("block", "sm:flex"); 
@@ -84,7 +83,6 @@ const resetSort = function() {
     
     //hide all projects
     for (let i = 0; i < project.length; i++) {
-        console.log(project[i]);
         project[i].classList.add("sm:hidden", "hidden");
         project[i].classList.remove("sm:-translate-x-36","sm:translate-x-36");
         project[i].classList.remove("show");
@@ -93,7 +91,6 @@ const resetSort = function() {
     //Display all (if firstvisit)
     if (firstVisit == true) {
         for (let i = 0; i < project.length; i++) {
-            console.log(project[i]);
             project[i].classList.add("show");
         }
         firstVisit = false;
@@ -167,7 +164,6 @@ function addActive(lang) {
     lang.classList.add("active", "bg-purple-200");
 };
 
-
 class Fade extends Highway.Transition{
     // Animation to change between subpages without reloading the doc, also includes an added animation transition.
     in({from, to, done}){
@@ -179,6 +175,7 @@ class Fade extends Highway.Transition{
     {height:'0vh'},
     {height:'90vh', top:'5rem', 
     onComplete: function(){
+        // Runs the right animations on the right page.
         if (to.classList.contains("home")) {
             setTimeout(addBar,3000)
             addKeys();

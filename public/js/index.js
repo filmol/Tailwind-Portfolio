@@ -47,5 +47,5 @@ document.addEventListener('scroll', function(e) {
 })
 
 
-//Displays progress in bar and waves on reload.
+//Displays progress bar and waves when content is loaded.
 document.addEventListener("DOMContentLoaded", () => addBar(), waves());
