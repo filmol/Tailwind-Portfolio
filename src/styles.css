@@ -1,4 +1,5 @@
 /* ./your-css-folder/styles.css */
+/* Customized classes that applies several tailwind CSS class functions in one step */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
