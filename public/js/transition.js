@@ -56,9 +56,6 @@ const addKeys = function(){
     }, 1);
 }
 
-const removeUnderline = function(){
-    document.querySelector(".aboutBtn").classList.remove("underline");
-    document.querySelector(".skillsBtn").classList.remove("underline");
 const showProjects = function() {
     // Displays all projects with .show in classlist,
     // Transforms every other project into a slightly hortisonally displaced position with tailwind classes.
