@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build-css": "tailwindcss build src/styles.css -o public/styles.css",
+    "build-css": "tailwindcss build src/tailwind.source.css -o public/styles.css",
     "build": "parcel build public/index.html",
     "start": "parcel public/index.html"
   },

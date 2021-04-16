@@ -161,6 +161,24 @@ function addActive(lang) {
     lang.classList.add("active", "bg-purple-200");
 };
 
+function checkDarkMode() {
+    // Func should be called when darkmode is toggled. add eventlistener.
+    let html = document.querySelector("#html").classList[0];
+    let svg = document.getElementsByClassName("dark:white-svg");
+    
+    if (html == "dark") {
+        for (let i=0; i<svg.length; i++) {   
+            svg[i].style.fill="white";
+            }; 
+    }
+    else {
+        for (let i=0; i<svg.length; i++) {   
+            svg[i].style.fill="black";
+            }; 
+    }
+}
+
+
 class Fade extends Highway.Transition{
     // Animation to change between subpages without reloading the doc, also includes an added animation transition.
     in({from, to, done}){
@@ -185,16 +203,19 @@ class Fade extends Highway.Transition{
             document.querySelector("#nav-underline").classList.remove("margin-contact","margin-about","margin-skills", "margin-projects");           
             document.querySelector("#nav-underline").classList.add("margin-projects");
             addListener();
+            checkDarkMode();
             } 
         if (to.classList.contains("skills")) {
             addKeys();
             document.querySelector("#nav-underline").classList.remove("margin-contact","margin-about","margin-skills", "margin-projects");           
             document.querySelector("#nav-underline").classList.add("margin-skills");
+            checkDarkMode();
             } 
         if (to.classList.contains("contact")) {
             addKeys();
             document.querySelector("#nav-underline").classList.remove("margin-contact","margin-about","margin-skills", "margin-projects");           
             document.querySelector("#nav-underline").classList.add("margin-contact");
+            checkDarkMode();
         }
         
         //Scroll to top as default for each page

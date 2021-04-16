@@ -10,47 +10,86 @@
 <body>
 
     <main data-router-wrapper class="blur-content">
-        <section data-router-view="skills" class="skills top-20" id="main-container">
+        <section data-router-view="skills" class="skills top-20 dark:bg-black" id="main-container">
             <div id="container" class="skills-content ease-in-out sm:pb-12">
                 <div class="skills-presentation mt-4 sm:mt-8 w-screen">
                     <h2 class="hidden sm:block sm:text-center text-6xl font-bold leading-tight">Skills</h2>
                     <div class="hidden sm:block border-b-8 mt-2 border-purple-200 m-auto w-28 delay-700 duration-1000 transform opacity-0 transition-all -translate-x-full" data-replace='{ "-translate-x-full": "-translate-x-0", "opacity-0": "opacity-100" }'></div>     
 
                     <div id="skillsContainer" class="sm:mt-8 mt-4 pr-2 sm:w-3/4 m-auto justify-evenly grid grid-rows-2 sm:grid-rows-1 grid-flow-col">
-                        <div class="w-48 sm:w-60 sm:p-0 p-2">
-                            <img src="images/cognitive.svg" alt="Lightbulb -Icon from thenounproject.com" class="w-1/2 m-auto sm:mt-12">
+                        <div class="w-48 sm:w-60 sm:p-0 p-2 dark:text-white">
+                            <div class="w-1/2 m-auto sm:mt-12 ">
+                                <svg class="dark:white-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 128 128" style="enable-background:new 0 0 128 128;" xml:space="preserve"><g>
+                                    <path d="M117.2,72.3l-6.4-17.9c0.2-6.7-0.8-16.8-6.4-27c-2.1-3.8-6.4-11.6-15.1-16.8c-4.5-2.7-9.9-4.4-15.5-5l-0.4,4   c5,0.5,9.9,2,13.9,4.4c7.8,4.6,11.6,11.6,13.7,15.3c5.3,9.6,6.1,19,5.9,25.2l0,0.5l5.9,16.6l-5.2,0.8c-0.6,0.1-1.1,0.4-1.5,0.9   c-0.3,0.5-0.4,1.1-0.3,1.7c1.2,4.8,1.5,9.6,1.1,14.4c-0.4,4.6-0.7,7.2-2.4,9.1c-3.7,4.3-11.6,3-13.1,2.7c-0.6-0.1-1.3,0-1.8,0.4   c-0.5,0.4-0.8,1-0.8,1.6l-0.4,15.1H36.4c0.8-2.3,1.6-4.6,2.3-6.9c2.8-8.5,4.2-12.8,4.6-15.5c0.7-4.3-0.1-8.9-2.2-13.7l-3.6,1.6   c1.8,4.1,2.5,7.9,1.9,11.4c-0.4,2.4-1.7,6.5-4.5,14.9c-1,3.1-2,6.1-3.2,9.1c-0.3,0.7-0.2,1.4,0.2,2c0.4,0.6,1.1,0.9,1.8,0.9h56.3   c1.2,0,2.2-1,2.2-2.1l0.4-14.8c3.9,0.4,10.7,0.4,14.8-4.3c2.7-3,3-6.7,3.4-11.4c0.4-4.6,0.1-9.2-0.8-13.7l5.5-0.9   c0.6-0.1,1.2-0.5,1.5-1C117.4,73.6,117.4,72.9,117.2,72.3z"/>
+                                    <path d="M38.8,70.7v7.1h16v-7.1c2.4-0.7,4.7-1.6,6.9-2.9l5,5L78,61.6l-5-5c1.2-2.2,2.2-4.5,2.9-6.9H83v-16h-7.1   c-0.7-2.4-1.6-4.7-2.9-6.9l5-5L66.8,10.4l-5,5c-2.2-1.2-4.5-2.2-6.9-2.9V5.5h-16v7.1c-2.4,0.7-4.7,1.6-6.9,2.9l-5-5L15.6,21.7l5,5   c-1.2,2.2-2.2,4.5-2.9,6.9h-7.1v16l7.1,0c0.7,2.4,1.6,4.7,2.9,6.9l-5,5l11.3,11.3l5-5C34.1,69.1,36.4,70,38.8,70.7z M26.9,67.2   l-5.6-5.6l4.5-4.5l-0.9-1.4c-1.7-2.6-2.9-5.5-3.5-8.5l-0.3-1.6l-6.3,0v-8H21l0.3-1.6c0.7-3.1,1.9-5.9,3.5-8.5l0.9-1.4l-4.5-4.5   l5.6-5.6l4.5,4.5l1.4-0.9c2.6-1.7,5.5-2.9,8.5-3.5l1.6-0.3V9.5h8v6.3l1.6,0.3c3.1,0.7,5.9,1.9,8.5,3.5l1.4,0.9l4.5-4.5l5.6,5.6   l-4.5,4.5l0.9,1.4c1.7,2.6,2.9,5.5,3.5,8.5l0.3,1.6H79v8h-6.3l-0.3,1.6c-0.7,3.1-1.9,5.9-3.5,8.5l-0.9,1.4l4.5,4.4l-5.6,5.6   l-4.5-4.5l-1.4,0.9c-2.6,1.7-5.5,2.9-8.5,3.5l-1.6,0.3v6.3h-8v-6.3l-1.6-0.3c-3.1-0.7-5.9-1.9-8.5-3.5l-1.4-0.9L26.9,67.2z"/>
+                                    <path d="M46.9,59.9c10,0,18.2-8.2,18.2-18.2s-8.2-18.2-18.2-18.2s-18.2,8.2-18.2,18.2S36.8,59.9,46.9,59.9z M46.9,27.4   c7.8,0,14.2,6.4,14.2,14.2s-6.4,14.2-14.2,14.2s-14.2-6.4-14.2-14.2S39,27.4,46.9,27.4z"/></g>
+                                </svg>
+                            </div>
+                            <!-- <img src="images/cognitive.svg" alt="Lightbulb -Icon from thenounproject.com" class="w-1/2 m-auto sm:mt-12"> -->
                             <h3 class="font-bold text-2xl text-center m-auto">Intuitive</h3>
-                            <p class="mt-2 rounded bg-white text-center m-auto">Presents easy-to-use content through intuitive UX/UI.</p>
+                            <p class="mt-2 rounded  text-center m-auto">Presents easy-to-use content through intuitive UX/UI.</p>
                         </div>
-                        <div class="w-48 sm:w-60 sm:mt-0 mt-4 sm:p-0 p-2">
-                            <img src="images/rocket.svg" alt="Rocket -Icon from thenounproject.com" class="w-1/2 m-auto sm:mt-12">
+                        <div class="w-48 sm:w-60 sm:mt-0 mt-4 sm:p-0 p-2 dark:text-white ">
+                            <div class="w-1/2 m-auto sm:mt-12 ">
+                                <svg class="dark:white-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" x="0px" y="0px"><g>
+                                    <path d="M14,9.5A1.5,1.5,0,1,0,12.5,11,1.5,1.5,0,0,0,14,9.5Zm-1.5.5a.5.5,0,1,1,.5-.5A.5.5,0,0,1,12.5,10ZM17,13.91C18.43,5.44,12.81,2.1,12.75,2.07a.5.5,0,0,0-.5,0C12.19,2.1,6.57,5.44,8,13.91,6,14.41,5,16.5,5,18.5a.49.49,0,0,0,.19.39A.51.51,0,0,0,5.5,19a.25.25,0,0,0,.12,0l3.94-1H12v.5a.5.5,0,0,0,1,0V18h2.44l3.94,1a.25.25,0,0,0,.12,0,.51.51,0,0,0,.31-.11A.49.49,0,0,0,20,18.5C20,16.5,19.05,14.41,17,13.91ZM12.5,3.09A8.59,8.59,0,0,1,15,6H10A8.59,8.59,0,0,1,12.5,3.09ZM8.21,14.89c.16.71.38,1.47.64,2.26L6,17.85A3.23,3.23,0,0,1,8.21,14.89ZM12.5,14a.5.5,0,0,0-.5.5V17H9.85C8.2,12.25,8.66,8.92,9.65,6.69c0,.1-.09.2-.13.31h6l-.12-.3c1,2.23,1.44,5.56-.21,10.3H13V14.5A.5.5,0,0,0,12.5,14ZM10,6c0,.07-.07.14-.11.22C9.89,6.18,9.92,6.11,10,6Zm6.19,11.11c.26-.79.48-1.55.64-2.26a3.23,3.23,0,0,1,2.17,3ZM15,19.5a4,4,0,0,1-2.24,3.42h0l0,0a.51.51,0,0,1-.44,0l0,0h0A4,4,0,0,1,10,19.5a.5.5,0,0,1,1,0,3,3,0,0,0,1.5,2.41A3.05,3.05,0,0,0,14,19.5a.5.5,0,0,1,.5-.5h0A.5.5,0,0,1,15,19.5Z"/></g>
+                                </svg>
+                            </div>
+                            <!-- <img src="images/rocket.svg" alt="Rocket -Icon from thenounproject.com" class="w-1/2 m-auto sm:mt-12"> -->
                             <h3 class="font-bold text-2xl text-center m-auto">Dynamic</h3>
-                            <p class="mt-2 rounded bg-white text-center m-auto">Websites don't have to be static, I love making pages come to life.</p>
+                            <p class="mt-2 rounded text-center m-auto">Websites don't have to be static, I love making pages come to life.</p>
                         </div>
-                        <div class="w-48 sm:w-60 sm:p-0 p-2">
-                            <img src="images/responsive.svg" alt="Responsive -Icon from thenounproject.com" class="w-1/2 m-auto sm:mt-12">
+                        <div class="w-48 sm:w-60 sm:p-0 p-2 dark:text-white ">
+                            <div class="w-1/2 m-auto sm:mt-12 ">
+                                <svg class="dark:white-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" version="1.1" x="0px" y="0px"><g stroke="none" stroke-width="1" fill-rule="evenodd"><g transform="translate(-72.000000, -216.000000)" fill-rule="nonzero"><g transform="translate(72.000000, 217.000000)">
+                                    <path d="M21,5 L21,1.5 C21,0.671572875 20.3284271,-1.66533454e-16 19.5,0 L1.5,0 C0.671572875,1.66533454e-16 -8.32667268e-17,0.671572875 0,1.5 L0,14.5 C1.66533454e-16,15.3284271 0.671572875,16 1.5,16 L15,16 L15,15 L1.5,15 C1.22385763,15 1,14.7761424 1,14.5 L1,1.5 C1,1.22385763 1.22385763,1 1.5,1 L19.5,1 C19.7761424,1 20,1.22385763 20,1.5 L20,5 L21,5 Z"/><polygon points="0.5 13 14.5 13 14.5 12 0.5 12"/>
+                                    <path d="M6.5,19 L14.5,19 C14.7761424,19 15,18.7761424 15,18.5 C15,18.2238576 14.7761424,18 14.5,18 L6.5,18 C6.22385763,18 6,18.2238576 6,18.5 C6,18.7761424 6.22385763,19 6.5,19 Z"/><polygon points="8.02565835 15.3418861 7.02565835 18.3418861 7.97434165 18.6581139 8.97434165 15.6581139"/><polygon points="12.0256584 15.6581139 13.0256584 18.6581139 13.9743416 18.3418861 12.9743416 15.3418861"/>
+                                    <path d="M15.5,5 C15.2238576,5 15,5.22385763 15,5.5 L15,20.5 C15,20.7761424 15.2238576,21 15.5,21 L22.5,21 C22.7761424,21 23,20.7761424 23,20.5 L23,5.5 C23,5.22385763 22.7761424,5 22.5,5 L15.5,5 Z M15.5,4 L22.5,4 C23.3284271,4 24,4.67157288 24,5.5 L24,20.5 C24,21.3284271 23.3284271,22 22.5,22 L15.5,22 C14.6715729,22 14,21.3284271 14,20.5 L14,5.5 C14,4.67157288 14.6715729,4 15.5,4 Z"/>
+                                    <path d="M15,18 L23,18 L23,7 L15,7 L15,18 Z M14.5,6 L23.5,6 C23.7761424,6 24,6.22385763 24,6.5 L24,18.5 C24,18.7761424 23.7761424,19 23.5,19 L14.5,19 C14.2238576,19 14,18.7761424 14,18.5 L14,6.5 C14,6.22385763 14.2238576,6 14.5,6 Z"/></g></g></g>
+                                </svg>
+                            </div>
+                            <!-- <img src="images/responsive.svg" alt="Responsive -Icon from thenounproject.com" class="w-1/2 m-auto sm:mt-12"> -->
                             <h3 class="font-bold text-2xl text-center m-auto">Responsive</h3>
-                            <p class="mt-2 rounded bg-white text-center m-auto">Developing layouts that will work on any device, big or small.</p>
+                            <p class="mt-2 rounded text-center m-auto">Developing layouts that will work on any device, big or small.</p>
                         </div>
-                        <!-- <div class="w-48 sm:w-60 sm:mt-0 mt-4 sm:p-0 p-2">
+                        <!-- <div class="w-48 sm:w-60 sm:mt-0 mt-4 sm:p-0 p-2 dark:text-white">
                             <img src="images/creative.svg" alt="Responsive -Icon from thenounproject.com" class="w-1/2 m-auto sm:mt-12">
                             <h3 class="font-bold text-2xl text-center m-auto">Driven</h3>
-                            <p class="mt-2 rounded bg-white text-center m-auto">Growth mindset, with a passion for new tech-solutions</p>
+                            <p class="mt-2 rounded text-center m-auto">Growth mindset, with a passion for new tech-solutions</p>
                         </div> -->
-                        <div class="w-48 sm:w-60 sm:mt-0 mt-4 sm:p-0 p-2">
-                            <img src="images/creative.svg" alt="Responsive -Icon from thenounproject.com" class="w-1/2 m-auto sm:mt-12">
+                        <div class="w-48 sm:w-60 sm:mt-0 mt-4 sm:p-0 p-2 dark:text-white">
+                            <div class="w-1/2 m-auto sm:mt-12 ">
+                                <svg class="dark:white-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" x="0px" y="0px"><g data-name="24-Creative">
+                                    <path d="M24,57a1,1,0,0,1-.707-.293l-4-4a1,1,0,0,1,0-1.414l30-30a1,1,0,0,1,1.414,0l4,4a1,1,0,0,1,0,1.414l-19,19-1.414-1.414L52.586,26,50,23.414,21.414,52,24,54.586l5.793-5.793,1.414,1.414-6.5,6.5A1,1,0,0,1,24,57Z"/>
+                                    <path d="M20,59a1,1,0,0,1-.707-.293l-2-2a1,1,0,0,1-.188-1.154l2-4,1.79.894L19.217,55.8l.98.98,3.356-1.678.894,1.79-4,2A1,1,0,0,1,20,59Z"/><path d="M53.707,27.707l-1.414-1.414L55.586,23,53,20.414l-2.293,2.293-1.414-1.414,3-3a1,1,0,0,1,1.414,0l4,4a1,1,0,0,1,0,1.414Z"/><rect x="48" y="24.172" width="2" height="5.657" transform="translate(-4.74 42.556) rotate(-45)"/>
+                                    <path d="M49,54H42a1,1,0,0,1-.707-.293L38.586,51H32.5a3.5,3.5,0,0,1,0-7h6.086l2.707-2.707A1,1,0,0,1,42,41h4.586l1.707-1.707,1.414,1.414-2,2A1,1,0,0,1,47,43H42.414l-2.707,2.707A1,1,0,0,1,39,46H32.5a1.5,1.5,0,0,0,0,3H39a1,1,0,0,1,.707.293L42.414,52h6.172l3.707-3.707A1,1,0,0,1,53,48h2v2H53.414l-3.707,3.707A1,1,0,0,1,49,54Z"/>
+                                    <path d="M63,53H55a1,1,0,0,1-1-1V32a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1V52A1,1,0,0,1,63,53Zm-7-2h6V33H56Z"/><rect x="40" y="39.586" width="2" height="2.828" transform="translate(-16.983 41) rotate(-45)"/>
+                                    <path d="M26,47H24V40a1,1,0,0,1,.293-.707l13-13A1,1,0,0,1,38,26h7v2H38.414L26,40.414Z"/>
+                                    <path d="M55,35H52a1,1,0,0,1-.707-.293l-3-3,1.414-1.414L52.414,33H55Z"/><rect x="16.586" y="57" width="2.828" height="2" transform="translate(-35.74 29.716) rotate(-45)"/>
+                                    <path d="M55,64H9a1,1,0,0,1-1-1V11a1,1,0,0,1,.293-.707l10-10A1,1,0,0,1,19,0H55a1,1,0,0,1,1,1V17H54V2H19.414L10,11.414V62H54V55h2v8A1,1,0,0,1,55,64Z"/>
+                                    <path d="M19,12H9a1,1,0,0,1-.707-1.707l10-10A1,1,0,0,1,20,1V11A1,1,0,0,1,19,12Zm-7.586-2H18V3.414Z"/>
+                                    <path d="M32,23A10,10,0,1,1,42,13,10.011,10.011,0,0,1,32,23ZM32,5a8,8,0,1,0,8,8A8.009,8.009,0,0,0,32,5Z"/>
+                                    <path d="M35,27H29a1,1,0,0,1-1-1V21h2v4h4V21h2v5A1,1,0,0,1,35,27Z"/><rect x="31" y="26" width="2" height="3"/>
+                                    <path d="M33,22H31V13a1,1,0,0,1,1-1h3V11h2v2a1,1,0,0,1-1,1H33Z"/>
+                                    <path d="M32,14H28a1,1,0,0,1-1-1V11h2v1h3Z"/><rect x="13" y="31" width="2" height="2"/><rect x="17" y="31" width="12" height="2"/><rect x="13" y="35" width="12" height="2"/><rect x="13" y="39" width="9" height="2"/><rect x="13" y="43" width="9" height="2"/><rect x="26" y="58" width="26" height="2"/></g>
+                                </svg>
+                            </div>
+                            <!-- <img src="images/creative.svg" alt="Responsive -Icon from thenounproject.com" class="w-1/2 m-auto sm:mt-12"> -->
                             <h3 class="font-bold text-2xl text-center m-auto block">Architecture</h3>
-                            <p class="mt-2 rounded bg-white text-center m-auto">Organizes complex information flows in an understandable way.                            </p>
+                            <p class="mt-2 rounded text-center m-auto">Organizes complex information flows in an understandable way.                            </p>
                         </div>
 
 
                     </div>
                     
                     <div class="center m-auto w-24 mt-6 sm:mt-24 sm:w-24">
-                        <img src="images/code.svg" alt="codesnippet -Icon from thenounproject.com">
+                        <svg class="dark:white-svg" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 125">
+                            <path d="M28.5564725 32.7231391L11.2796116 50l17.2768609 17.2768609c.8135922.8135922.8135922 2.132686 0 2.9462782-.8135923.8135923-2.132686.8135923-2.9462783 0l-18.75-18.75c-.81359227-.8135922-.81359227-2.132686 0-2.9462782l18.75-18.75c.8135923-.8135923 2.132686-.8135923 2.9462783 0 .8135922.8135922.8135922 2.132686 0 2.9462782zm42.887055 34.5537218L88.7203884 50 71.4435275 32.7231391c-.8135922-.8135922-.8135922-2.132686 0-2.9462782.8135923-.8135923 2.132686-.8135923 2.9462783 0l18.75 18.75c.8135923.8135922.8135923 2.132686 0 2.9462782l-18.75 18.75c-.8135923.8135923-2.132686.8135923-2.9462783 0-.8135922-.8135922-.8135922-2.132686 0-2.9462782zm-29.861516 18.7276523c-.3246587 1.1038394-1.4826852 1.7354903-2.5865247 1.4108316-1.1038394-.3246587-1.7354903-1.4826852-1.4108316-2.5865246l20.8333333-70.8333334c.3246587-1.1038394 1.4826852-1.7354903 2.5865247-1.4108316 1.1038394.3246587 1.7354903 1.4826852 1.4108316 2.5865246L41.5820115 86.0045132z"/>
+                        </svg>
+                        <!-- <img src="images/code.svg" alt="codesnippet -Icon from thenounproject.com"> -->
                     </div>
 
-                    <div class="w-full sm:w-1/2 m-auto pb-8">
+                    <div class="w-full sm:w-1/2 m-auto pb-8 dark:text-black">
                         <ul>
                             <li class="flex mt-2 sm:mt-4">
                                 <img src="images/skills_logo/JS.svg" alt="" class="w-24">

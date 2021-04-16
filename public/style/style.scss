@@ -1,4 +1,10 @@
 // Customized with regular CSS to support the Tailwind classes
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 * {
     margin: 0px;
     padding: 0px;
