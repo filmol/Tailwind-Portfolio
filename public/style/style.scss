@@ -61,3 +61,12 @@ font-family: 'Titillium Web', sans-serif;
 .margin-about {
     margin-left: 63px;
 }
+
+/* Toggle B */
+input:checked ~ .dot {
+    transform: translateX(100%);
+  }
+
+input:checked ~ .moon-bar {
+    background-color: rgba(16, 185, 129);
+}

@@ -3,6 +3,7 @@ import Fade from './transition';
 import { addBar } from './transition';
 import { waves } from './transition';
 import { top } from './transition';
+import { checkDarkMode } from './transition';
 
 const H = new Highway.Core({
     transitions: {
@@ -43,6 +44,20 @@ document.addEventListener('scroll', function(e) {
     //Displays top-arrow if scroll is below 300.
     window.scrollY > 300 ? topBtn.classList.remove("hidden") : topBtn.classList.add("hidden");
 })
+
+let darkModeBtn = document.querySelector("#toggleB")
+darkModeBtn.addEventListener('click', function(e) {
+    let html = document.querySelector("#html");
+    if (darkModeBtn.checked) {
+        html.classList.add("dark");
+        checkDarkMode();
+    }    
+    else {
+        html.classList.remove("dark");
+        checkDarkMode();
+    }
+})
+
 
 //Displays progress bar and waves when content is loaded.
 document.addEventListener("DOMContentLoaded", () => addBar(), waves());

@@ -1,4 +1,4 @@
-<html lang="en" id="html" class="dark">
+<html lang="en" id="html" class="">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,12 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto+Slab:wght@300;400;700&family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
 
 </head>
-<body class="dark:bg-black dark:text-white">
-    <nav class="sm:mt-2 nav-list w-full top-0 z-10 h-16 dark:bg-black dark:text-white">
+<body class="dark:bg-gray-900 dark:text-gray-400">
+    <nav class="sm:mt-2 nav-list w-full top-0 z-10 h-16 dark:bg-gray-900 dark:text-gray-400 sm:border-none dark:border-b-2 dark:border-gray-800">
         <div class="shadow-md sm:shadow-none">
             <div id="nav-width" class=" flex items-center justify-between w-3/4 m-auto">
                 <a class="align-middle overflow-visible" href="index.html">
-                    <span class="tiweb font-bold top-4 flex transform hover:-rotate-180 transition-transform duration-1000 ease-out lg:text-2xl border-solid border-2 border-black dark:border-white rounded p-2 hover:bg-purple-300 Dark:hover:bg-purple-300 my-3 sm:my-1 px-3"> F.M</span>
+                    <span class="tiweb font-bold top-4 flex transform hover:-rotate-180 transition-transform duration-1000 ease-out lg:text-2xl border-solid border-2 border-black dark:border-gray-400 rounded p-2 hover:bg-purple-300 Dark:hover:text-gray-900 my-3 sm:my-1 px-3"> F.M</span>
                 </a>
                 
                 <button class="sm:hidden absolute right-4 p-1 px-4 cursor-pointer rounded-xl transition duration-500 ease-in-out hover:text-purple-600" id="mobile-btn">
@@ -28,7 +28,7 @@
                 <!-- Mobile friendly menu -->
                 <div id="mobile-menu" class="hidden shadow-md bg-white w-screen fixed top-0">
                     <button class="sm:hidden absolute top-2 right-2 p-1 transition duration-500 ease-in-out hover:text-red-600">
-                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="w-8 h-8 dark:gray-svg" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                         </svg>
                     </button>
@@ -53,7 +53,7 @@
     </nav>
 
     <main data-router-wrapper class="blur-content">
-        <section data-router-view="home" class="home top-20 tiweb dark:bg-black" id="main-container">
+        <section data-router-view="home" class="home top-20 tiweb dark:bg-gray-900" id="main-container">
             <div id="container" class=" home-content sm:mt-12">
                 <div class="home-presentation sm:flex items-center justify-between w-3/4 m-auto">
  
@@ -86,15 +86,44 @@
     </main>
 
     <footer>
+        <div class="w-8 sm:flex hidden sm:absolute top-5 right-24">
+            <svg class="dark:gray-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 80 100" enable-background="new 0 0 80 80" xml:space="preserve"><g>
+                <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="   M55.3209229,51.5432625C52.2098656,58.8641586,44.9382477,64,36.4691391,64C25.1604652,64,16,54.8394585,16,43.5309372   c0-8.4569054,5.1234818-15.716013,12.4568119-18.8395023c-1.0370693,2.4567757-1.6172791,5.1604042-1.6172791,7.9999676   c0,11.3086739,9.172823,20.4692154,20.4814205,20.4692154C50.1604424,53.1606178,52.8641472,52.5802574,55.3209229,51.5432625z"/>
+                <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="   M38.4153099,21.503788c0,2.6463623-2.1452637,4.791626-4.791626,4.791626c2.6463623,0,4.791626,2.1453857,4.791626,4.791748   c0-2.6463623,2.1453247-4.791748,4.791687-4.791748C40.5606346,26.295414,38.4153099,24.1501503,38.4153099,21.503788z"/>
+                <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="   M52.1070595,34.8694496c0,2.6463623-2.1452637,4.791626-4.791626,4.791626c2.6463623,0,4.791626,2.1453857,4.791626,4.791748   c0-2.6463623,2.1453247-4.791748,4.791687-4.791748C54.2523842,39.6610756,52.1070595,37.5158119,52.1070595,34.8694496z"/>
+                <g><g><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="35.6604614" y1="39.25" x2="40.6125908" y2="39.25"/></g>
+                <g><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="38.1365242" y1="36.7739372" x2="38.1365242" y2="41.7260628"/></g></g>
+                <g><g><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="59.0478706" y1="30.25" x2="64" y2="30.25"/></g>
+                <g><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="61.5239372" y1="27.7739353" x2="61.5239372" y2="32.7260628"/></g></g>
+                <g><g><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="53.0478706" y1="18.4760647" x2="58" y2="18.4760647"/></g>
+                <g><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="55.5239372" y1="16" x2="55.5239372" y2="20.9521275"/></g></g></g>
+            </svg>
+        </div>
+
+        <div class="sm:flex hidden sm:fixed top-6 right-14 delay-700 duration-1000">
+            <label for="toggleB" class="flex items-center cursor-pointer">
+              <!-- toggle -->
+              <div class="relative">
+                <!-- input -->
+                <input type="checkbox" id="toggleB" class="sr-only">
+                <!-- line -->
+                <div class="moon-bar block bg-gray-300 w-10 h-6 rounded-full"></div>
+                <!-- dot -->
+                <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition"></div>
+              </div>
+            </label>
+        </div>
+
+          
         <!-- Mobile arrow-up -->
-        <button id=top-function class=" sm:hidden hidden w-10 h-10 animate-bounce text-black opacity-75 fixed bottom-6 right-1 ease-in-out duration-1000">
+        <button id=top-function class=" sm:hidden hidden w-10 h-10 animate-bounce dark:gray-svg opacity-75 fixed bottom-6 right-1 ease-in-out duration-1000">
             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
             </svg> 
         </button>
         
-        <div id="socials" class="sm:bottom-1/4 float-left left-6 hidden sm:fixed sm:block delay-700 duration-1000">
-            <div class="left-1/2 mb-3 hidden sm:block relative sm:border-solid sm:border-l-2 sm:border-black dark:border-white h-24"> </div>
+        <div id="socials" class="sm:bottom-1/4 float-left left-6 hidden sm:fixed sm:block duration-400">
+            <div class="left-1/2 mb-3 hidden sm:block relative sm:border-solid sm:border-l-2 sm:border-black dark:border-gray-400 h-24"> </div>
             <a href="https://github.com/filmol" target="_blank" class="hover:text-purple-600 duration-300 mr-2" label="github">
                 <svg class="m-auto mr-4 sm:mr-auto sm:mb-6 w-6 inline-block sm:block" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
@@ -110,7 +139,7 @@
                     <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                 </svg>
             </a>
-            <div class="mt-3 hidden sm:block relative sm:border-solid sm:border-l-2 sm:border-black dark:border-white h-24 left-1/2 m-auto "></div>                       
+            <div class="mt-3 hidden sm:block relative sm:border-solid sm:border-l-2 sm:border-black dark:border-gray-400 h-24 left-1/2 m-auto "></div>                       
         </div>
     </footer>
     <script src="./js/index.js"></script>

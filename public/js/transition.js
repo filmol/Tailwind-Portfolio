@@ -157,18 +157,18 @@ const addListener = function() {
 
 function addActive(lang) {
     let active = document.querySelector(".active");
-    active.classList.remove("active", "bg-purple-200");
-    lang.classList.add("active", "bg-purple-200");
+    active.classList.remove("active", "bg-purple-200", "text-gray-800");
+    lang.classList.add("active", "bg-purple-200", "text-gray-800");
 };
 
-function checkDarkMode() {
+export function checkDarkMode() {
     // Func should be called when darkmode is toggled. add eventlistener.
     let html = document.querySelector("#html").classList[0];
-    let svg = document.getElementsByClassName("dark:white-svg");
+    let svg = document.getElementsByClassName("dark:gray-svg");
     
     if (html == "dark") {
         for (let i=0; i<svg.length; i++) {   
-            svg[i].style.fill="white";
+            svg[i].style.fill="rgba(209, 213, 219";
             }; 
     }
     else {
