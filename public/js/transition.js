@@ -155,7 +155,7 @@ const addListener = function() {
     })
 }
 
-function addActive(lang) {
+const addActive = function(lang) {
     let active = document.querySelector(".active");
     active.classList.remove("active", "bg-purple-200", "text-gray-800");
     lang.classList.add("active", "bg-purple-200", "text-gray-800");
