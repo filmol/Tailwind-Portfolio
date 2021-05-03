@@ -1,4 +1,5 @@
-import Highway from '@dogstudio/highway';
+const Highway = require('node_modules/@dogstudio/highway');
+
 import Fade from './transition';
 import { addBar } from './transition';
 import { waves } from './transition';
