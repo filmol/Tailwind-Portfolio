@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build-css": "tailwindcss build src/tailwind.source.css -o public/styles.css",
-    "build": "parcel build public/index.html",
+    "build": "parcel build --no-minify public/index.html",
     "start": "parcel public/index.html"
   },
   "keywords": [],
