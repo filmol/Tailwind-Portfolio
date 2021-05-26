@@ -4,8 +4,7 @@ The animations are done through <strong>JavaScript</strong>, with the JS librari
 <strong>Parcel JS</strong> is used as a web application bundler and the site is deployed on <strong>Netlify.</strong>
 
 <strong>Instructions to run locally</strong>
-1. Make sure you have Parcel installed.
-   Or else install it:
+1. Make sure you have Parcel installed, otherwise install it with:
     ```
     npm install -g parcel-bundler
     ```
