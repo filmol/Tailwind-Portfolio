@@ -10,8 +10,8 @@ The animations are done through <strong>JavaScript</strong>, with the JS librari
     npm install -g parcel-bundler
     ```
 2. Run the following in your texteditor of choice:
-```
-parcel start public/index.html
-```
+    ```
+    parcel start public/index.html
+    ```
 3. Enter the website locally when the build is done at localhost.
 
