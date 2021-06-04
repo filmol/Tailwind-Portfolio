@@ -1,7 +1,7 @@
 # Tailwind-Portfolio
 Created with the intent to try out the <strong>Tailwind CSS</strong> framework. <br>
 The animations are done through <strong>JavaScript</strong>, with the JS libraries <strong>Highway</strong> and <strong>GSAP.</strong> <br>
-<strong>Parcel JS</strong> is used as a web application bundler and the site is deployed on <strong>Netlify.</strong>
+<strong>Parcel JS</strong> is used as a web application bundler and the site is deployed on <strong>Netlify.</strong> <br>
 <strong>Instagram API</strong> is used to fetch down the latest header with <strong>axios</strong>
 
 <strong>Instructions to run locally</strong>
