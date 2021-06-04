@@ -1,6 +1,7 @@
 import Highway from '@dogstudio/highway';
 import {TimelineLite} from 'gsap';
 import {gsap} from 'gsap';
+import axios from "axios";
 
 gsap.config({nullTargetWarn: false});
 
@@ -35,6 +36,28 @@ export const waves = function(){
     wave.classList.add("rotate-12");
         setTimeout(removeRotate,300)
     }}
+
+export const igAPI = function () {
+    const options = {
+        method: 'GET',
+        url: 'https://instagram47.p.rapidapi.com/user_posts',
+        params: {username: 'filipmoltzer'},
+        headers: {
+            'x-rapidapi-key': '83323e95f4msh2d60f0bc908b61ep12f88cjsn1fee7db11e56',
+            'x-rapidapi-host': 'instagram47.p.rapidapi.com'
+        }
+    };
+        
+    axios.request(options).then(function (response) {
+        const postnr = Math.floor(Math.random() * 10);
+        document.querySelector("#API-container").children[0].href = "https://www.instagram.com/p/"+response.data.body.items[postnr].code
+        document.querySelector("#API-header").innerHTML=response.data.body.items[postnr].caption.text
+
+        //   ApiContainer.
+    }).catch(function (error) {
+        console.error(error);
+    });
+}
 
 export const top = function () {
         // Scrolls back to navigation top
@@ -197,6 +220,7 @@ class Fade extends Highway.Transition{
             document.querySelector("#nav-underline").classList.remove("margin-contact","margin-about","margin-skills", "margin-projects");           
             document.querySelector("#nav-underline").classList.add("margin-about");           
             waves();
+            igAPI();
         } 
         if (to.classList.contains("projects")) {
             addKeys();
