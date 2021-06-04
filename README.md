@@ -21,7 +21,7 @@ The animations are done through <strong>JavaScript</strong>, with the JS librari
 4. Enter the website locally when the build is done at localhost.
 
 ## Run the Live site
-1. Access the site with the following link below in your preferred web browser
+1. Access the site with the following link in your preferred web browser
 https://moltzer.netlify.app/
 
 ## Contributing
