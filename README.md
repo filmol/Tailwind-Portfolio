@@ -14,3 +14,11 @@ The animations are done through <strong>JavaScript</strong>, with the JS librari
     ```
 3. Enter the website locally when the build is done at localhost.
 
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
