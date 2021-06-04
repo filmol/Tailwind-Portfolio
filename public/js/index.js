@@ -59,6 +59,9 @@ darkModeBtn.addEventListener('click', function(e) {
     }
 })
 
+
+const ApiContainer = document.querySelector("#API-container");
+
 const options = {
     method: 'GET',
     url: 'https://instagram47.p.rapidapi.com/user_posts',
@@ -70,7 +73,10 @@ const options = {
   };
   
   axios.request(options).then(function (response) {
-      console.log(response.data);
+      document.querySelector("#API-container").children[0].href = "https://www.instagram.com/p/"+response.data.body.items[0].code
+      document.querySelector("#API-header").innerHTML=response.data.body.items[0].caption.text
+
+      //   ApiContainer.
   }).catch(function (error) {
       console.error(error);
   });
