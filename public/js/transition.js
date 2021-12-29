@@ -82,7 +82,7 @@ const addKeys = function(){
 const showProjects = function() {
     // Displays all projects with .show in classlist,
     // Transforms every other project into a slightly hortisonally displaced position with tailwind classes.
-    const projectList = document.querySelectorAll(".show");
+    const projectList = document.querySelectorAll(".show");   
     for (let i = 0; i < projectList.length; i++) {
         projectList[i].classList.add("block", "sm:flex"); 
         projectList[i].classList.remove("sm:hidden", "hidden");
