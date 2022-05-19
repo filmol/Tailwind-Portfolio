@@ -1,72 +1,75 @@
 // Customized with regular CSS to support the Tailwind classes
 .center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
-    
+
 html {
-    scroll-behavior: smooth;
-  }
-  
+  scroll-behavior: smooth;
+}
+
 .nav-list {
-    height: 10vh;
+  height: 10vh;
 }
 
 .nav-links {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .home,
 .skills,
 .projects,
 .contact {
-    position: absolute;
-    width: 100%;
-    background-color:white;
+  position: absolute;
+  width: 100%;
+  background-color: white;
 }
 
 .blur {
-    filter: blur(3px);  
+  filter: blur(3px);
 }
 
 .open-sans {
-font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 .playfair {
-font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display', serif;
 }
 .roboto {
-font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto Slab', serif;
 }
 .tiweb {
-font-family: 'Titillium Web', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
+}
+#nav-underline {
+  border-bottom-width: 6px;
 }
 
 .margin-contact {
-    margin-left: 505px; 
+  margin-left: 505px;
 }
 .margin-projects {
-    margin-left: 341px; 
+  margin-left: 341px;
 }
 .margin-skills {
-    margin-left: 193px; 
+  margin-left: 193px;
 }
 .margin-about {
-    margin-left: 57px;
+  margin-left: 57px;
 }
 
 /* Toggle B */
 input:checked ~ .dot {
-    transform: translateX(100%);
-  }
+  transform: translateX(100%);
+}
 
 input:checked ~ .moon-bar {
-    background-color: rgba(16, 185, 129);
+  background-color: rgba(16, 185, 129);
 }

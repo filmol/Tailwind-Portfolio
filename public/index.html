@@ -1,141 +1,448 @@
 <html lang="en" id="html" class="">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filip Moltzer - About</title>
-    <link rel="icon" type="image/png" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/129/male-technologist-type-1-2_1f468-1f3fb-200d-1f4bb.png" hreflang="en-us">
-    <link rel="stylesheet" href="./style/style.scss">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com"> 
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto+Slab:wght@300;400;700&family=Titillium+Web:wght@300;400;700&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/320/apple/129/male-technologist-type-1-2_1f468-1f3fb-200d-1f4bb.png"
+      hreflang="en-us"
+    />
+    <link rel="stylesheet" href="./style/style.scss" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto+Slab:wght@300;400;700&family=Titillium+Web:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dark:bg-gray-900 dark:text-gray-400">
+    <nav
+      class="top-0 z-10 w-full h-16 sm:mt-2 nav-list dark:bg-gray-900 dark:text-gray-400 sm:border-none dark:border-b-2 dark:border-gray-800"
+    >
+      <div class="shadow-md sm:shadow-none">
+        <div
+          id="nav-width"
+          class="flex items-center justify-between w-3/4 m-auto"
+        >
+          <a class="overflow-visible align-middle" href="index.html">
+            <span
+              class="flex p-2 px-3 my-3 font-bold transition-transform duration-1000 ease-out transform border-2 border-black border-solid rounded tiweb top-4 hover:-rotate-180 lg:text-2xl dark:border-gray-400 hover:bg-purple-300 Dark:hover:text-gray-900 sm:my-1"
+            >
+              F.M</span
+            >
+          </a>
 
-</head>
-<body class="dark:bg-gray-900 dark:text-gray-400">
-    <nav class="sm:mt-2 nav-list w-full top-0 z-10 h-16 dark:bg-gray-900 dark:text-gray-400 sm:border-none dark:border-b-2 dark:border-gray-800">
-        <div class="shadow-md sm:shadow-none">
-            <div id="nav-width" class=" flex items-center justify-between w-3/4 m-auto">
-                <a class="align-middle overflow-visible" href="index.html">
-                    <span class="tiweb font-bold top-4 flex transform hover:-rotate-180 transition-transform duration-1000 ease-out lg:text-2xl border-solid border-2 border-black dark:border-gray-400 rounded p-2 hover:bg-purple-300 Dark:hover:text-gray-900 my-3 sm:my-1 px-3"> F.M</span>
-                </a>
-                
-                <button class="sm:hidden absolute right-4 p-1 px-4 cursor-pointer rounded-xl transition duration-500 ease-in-out hover:text-purple-600" id="mobile-btn">
-                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button> 
+          <button
+            class="absolute p-1 px-4 transition duration-500 ease-in-out cursor-pointer sm:hidden right-4 rounded-xl hover:text-purple-600"
+            id="mobile-btn"
+          >
+            <svg
+              class="w-10 h-10"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
 
-                <!-- Mobile friendly menu -->
-                <div id="mobile-menu" class="hidden shadow-md bg-white w-screen fixed top-0">
-                    <button class="sm:hidden absolute top-2 right-2 p-1 transition duration-500 ease-in-out hover:text-red-600">
-                        <svg class="w-8 h-8 dark:gray-svg" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                    <a href="index.html" class="w-screen center shadow-sm text-3xl p-6 transition ease-in duration-300 hover:bg-purple-400  hover:bg-opacity-25 rounded "><span class="mr-2 text-purple-600">01.</span><span class="">About</span></a>
-                    <a href="skills2.html" class="w-screen center shadow-sm text-3xl p-6 transition ease-in duration-300 hover:bg-purple-400  hover:bg-opacity-25 rounded"><span class="mr-2 text-purple-600">02.</span><span class="">Skills</span></a>
-                    <a href="projects2.html" class="w-screen center shadow-sm text-3xl p-6 transition ease-in duration-300 hover:bg-purple-400  hover:bg-opacity-25 rounded"><span class="mr-2 text-purple-600">03.</span><span class="">Projects</span></a>
-                    <a href="contact.html" class="w-screen center shadow-lg text-3xl p-6 transition ease-in duration-300 hover:bg-purple-400  hover:bg-opacity-25 rounded"><span class="mr-2 text-purple-600">04.</span><span class="">Contact</span></a>
-                </div>
-                <!-- END *Mobile friendly menu* END -->
-    
-                <div class="hidden sm:inline-block align-middle">
-                    <a href="index.html" class="h-20 lg:text-1xl sm:text-2xl  text-1xl p-4 hover:bg-purple-400  hover:bg-opacity-25 rounded"><span class="mr-2 text-purple-600">01.</span><span class=" aboutBtn">About</span></a>
-                    <a href="skills2.html" class="h-20 lg:text-1xl sm:text-2xl  text-1xl p-4 hover:bg-purple-400  hover:bg-opacity-25 rounded"><span class="mr-2 text-purple-600">02.</span><span class="skillsBtn">Skills</span></a>
-                    <a href="projects2.html" class="h-20 lg:text-1xl sm:text-2xl  text-1xl p-4 hover:bg-purple-400  hover:bg-opacity-25 rounded"><span class="mr-2 text-purple-600">03.</span><span class="projectsBtn">Projects</span></a>
-                    <a href="contact.html" class="h-20 lg:text-1xl sm:text-2xl  text-1xl p-4 hover:bg-purple-400  hover:bg-opacity-25 rounded"><span class="mr-2 text-purple-600">04.</span><span class="contactBtn">Contact</span></a>
-                    <div id="nav-underline" class="border-b-8 border-purple-200 w-14 absolute margin-about table-cell duration-1000 transform transition-all"></div>
-                </div>
-            </div>
+          <!-- Mobile friendly menu -->
+          <div
+            id="mobile-menu"
+            class="fixed top-0 hidden w-screen bg-white shadow-md"
+          >
+            <button
+              class="absolute p-1 transition duration-500 ease-in-out sm:hidden top-2 right-2 hover:text-red-600"
+            >
+              <svg
+                class="w-8 h-8 dark:gray-svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <a
+              href="index.html"
+              class="w-screen p-6 text-3xl transition duration-300 ease-in rounded shadow-sm center hover:bg-purple-400 hover:bg-opacity-25"
+              ><span class="mr-2 text-purple-600">01.</span
+              ><span class="">About</span></a
+            >
+            <a
+              href="skills2.html"
+              class="w-screen p-6 text-3xl transition duration-300 ease-in rounded shadow-sm center hover:bg-purple-400 hover:bg-opacity-25"
+              ><span class="mr-2 text-purple-600">02.</span
+              ><span class="">Skills</span></a
+            >
+            <a
+              href="projects2.html"
+              class="w-screen p-6 text-3xl transition duration-300 ease-in rounded shadow-sm center hover:bg-purple-400 hover:bg-opacity-25"
+              ><span class="mr-2 text-purple-600">03.</span
+              ><span class="">Projects</span></a
+            >
+            <a
+              href="contact.html"
+              class="w-screen p-6 text-3xl transition duration-300 ease-in rounded shadow-lg center hover:bg-purple-400 hover:bg-opacity-25"
+              ><span class="mr-2 text-purple-600">04.</span
+              ><span class="">Contact</span></a
+            >
+          </div>
+          <!-- END *Mobile friendly menu* END -->
+
+          <div class="hidden align-middle sm:inline-block">
+            <a
+              href="index.html"
+              class="h-20 p-4 rounded lg:text-1xl sm:text-2xl text-1xl hover:bg-purple-400 hover:bg-opacity-25"
+              ><span class="mr-2 text-purple-600">01.</span
+              ><span class="aboutBtn">About</span></a
+            >
+            <a
+              href="skills2.html"
+              class="h-20 p-4 rounded lg:text-1xl sm:text-2xl text-1xl hover:bg-purple-400 hover:bg-opacity-25"
+              ><span class="mr-2 text-purple-600">02.</span
+              ><span class="skillsBtn">Skills</span></a
+            >
+            <a
+              href="projects2.html"
+              class="h-20 p-4 rounded lg:text-1xl sm:text-2xl text-1xl hover:bg-purple-400 hover:bg-opacity-25"
+              ><span class="mr-2 text-purple-600">03.</span
+              ><span class="projectsBtn">Projects</span></a
+            >
+            <a
+              href="contact.html"
+              class="h-20 p-4 rounded lg:text-1xl sm:text-2xl text-1xl hover:bg-purple-400 hover:bg-opacity-25"
+              ><span class="mr-2 text-purple-600">04.</span
+              ><span class="contactBtn">Contact</span></a
+            >
+            <div
+              id="nav-underline"
+              class="absolute table-cell transition-all duration-1000 transform border-purple-200 rounded-sm w-14 margin-about"
+            ></div>
+          </div>
         </div>
+      </div>
     </nav>
 
     <main data-router-wrapper class="blur-content">
-        <section data-router-view="home" class="home top-20 tiweb dark:bg-gray-900" id="main-container">
-            <div id="container" class=" home-content sm:mt-12">
-                <div class="home-presentation sm:flex items-center justify-between w-3/4 m-auto">
- 
-                    <div class="lg:w-1/12"></div>
-                        <div class="w-12/12 lg:w-5/12 p-5 center">
-                            <img src="images/filmol.png" alt="" class="object-cover center rounded-md"> 
-                        </div>
-                        <div class="w-12/12 lg:w-4/12">
-                            <h1 class="lg:text-6xl sm:text-2xl text-3xl justify-center sm:justify-start mb-5 sm:mb-10 ml-5 flex">Hello!<span class="ml-4 flex transform hover:rotate-12 duration-300 wave"> 👋🏽 </span></h1>
-                            <h2 class="lg:text-3xl sm:text-2xl text-1xl ml-5 center">I'm Filip, a 25-year-old computer science student, tech-head, developer, and big pizza lover.</h2>
-                        </div>
-                    <div class="lg:w-1/12"></div>
-                </div>
-                <a href="skills2.html" class="sm:block hidden w-10 h-10 fixed bottom-6 right-6 delay-700 duration-1000 transform opacity-0 transition-all translate-x-full" data-replace='{ "translate-x-full": "translate-x-0", "opacity-0": "opacity-100" }'>
-                    <svg class="hover:text-purple-600 duration-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                </a>
-
+      <section
+        data-router-view="home"
+        class="home top-20 tiweb dark:bg-gray-900"
+        id="main-container"
+      >
+        <div id="container" class="home-content sm:mt-12">
+          <div
+            class="items-center justify-between w-3/4 m-auto home-presentation sm:flex"
+          >
+            <div class="lg:w-1/12"></div>
+            <div class="p-5 w-12/12 lg:w-5/12 center">
+              <img
+                src="images/filmol.png"
+                alt=""
+                class="object-cover rounded-md center"
+              />
             </div>
-            <div class="progress-bar">
-                <h2 class="center lg:text-2xl sm:text-2xl  text-1xl mb-5 mt-8 sm:mt-16" id="grad">University studies completed </h2>
-                <div class="h-4 w-1/2 sm:w-1/6 relative rounded-full overflow-hidden flex m-auto hover:bg-gray-200">
-                    <div class="w-full h-full bg-gray-200 absolute hover:opacity-25"></div>
-                    <div id="bar" class="transition-all ease-out duration-1000 h-full bg-green-500 relative w-0/12"></div>
-                </div>
+            <div class="w-12/12 lg:w-4/12">
+              <h1
+                class="flex justify-center mb-5 ml-5 text-3xl lg:text-6xl sm:text-2xl sm:justify-start sm:mb-10"
+              >
+                Hello!<span
+                  class="flex ml-4 duration-300 transform hover:rotate-12 wave"
+                >
+                  👋🏽
+                </span>
+              </h1>
+              <h2 class="ml-5 lg:text-3xl sm:text-2xl text-1xl center">
+                I'm Filip, a 25-year-old computer science student, tech-head,
+                developer, and big pizza lover.
+              </h2>
             </div>
-        </section>
+            <div class="lg:w-1/12"></div>
+          </div>
+          <a
+            href="skills2.html"
+            class="fixed hidden w-10 h-10 transition-all duration-1000 delay-700 transform translate-x-full opacity-0 sm:block bottom-6 right-6"
+            data-replace='{ "translate-x-full": "translate-x-0", "opacity-0": "opacity-100" }'
+          >
+            <svg
+              class="duration-200 hover:text-purple-600"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+        <div class="progress-bar">
+          <h2
+            class="mt-8 mb-5 center lg:text-2xl sm:text-2xl text-1xl sm:mt-16"
+            id="grad"
+          >
+            Graduation 🎓
+          </h2>
+          <div
+            class="relative flex w-1/2 h-6 m-auto overflow-hidden rounded-full sm:w-1/6 hover:bg-gray-200"
+          >
+            <div
+              class="absolute w-full h-full bg-gray-200 hover:opacity-25"
+            ></div>
+            <div
+              id="bar"
+              class="relative h-full transition-all duration-1000 ease-out bg-green-500 w-0/12"
+            ></div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-            <svg class="dark:gray-svg w-8 sm:flex hidden sm:absolute top-5 right-24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 80 100" enable-background="new 0 0 80 80" xml:space="preserve"><g>
-                <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="   M55.3209229,51.5432625C52.2098656,58.8641586,44.9382477,64,36.4691391,64C25.1604652,64,16,54.8394585,16,43.5309372   c0-8.4569054,5.1234818-15.716013,12.4568119-18.8395023c-1.0370693,2.4567757-1.6172791,5.1604042-1.6172791,7.9999676   c0,11.3086739,9.172823,20.4692154,20.4814205,20.4692154C50.1604424,53.1606178,52.8641472,52.5802574,55.3209229,51.5432625z"/>
-                <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="   M38.4153099,21.503788c0,2.6463623-2.1452637,4.791626-4.791626,4.791626c2.6463623,0,4.791626,2.1453857,4.791626,4.791748   c0-2.6463623,2.1453247-4.791748,4.791687-4.791748C40.5606346,26.295414,38.4153099,24.1501503,38.4153099,21.503788z"/>
-                <path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="   M52.1070595,34.8694496c0,2.6463623-2.1452637,4.791626-4.791626,4.791626c2.6463623,0,4.791626,2.1453857,4.791626,4.791748   c0-2.6463623,2.1453247-4.791748,4.791687-4.791748C54.2523842,39.6610756,52.1070595,37.5158119,52.1070595,34.8694496z"/>
-                <g><g><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="35.6604614" y1="39.25" x2="40.6125908" y2="39.25"/></g>
-                <g><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="38.1365242" y1="36.7739372" x2="38.1365242" y2="41.7260628"/></g></g>
-                <g><g><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="59.0478706" y1="30.25" x2="64" y2="30.25"/></g>
-                <g><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="61.5239372" y1="27.7739353" x2="61.5239372" y2="32.7260628"/></g></g>
-                <g><g><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="53.0478706" y1="18.4760647" x2="58" y2="18.4760647"/></g>
-                <g><line stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="55.5239372" y1="16" x2="55.5239372" y2="20.9521275"/></g></g></g>
-            </svg>
+      <svg
+        class="hidden w-8 dark:gray-svg sm:flex sm:absolute top-5 right-24"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+        x="0px"
+        y="0px"
+        viewBox="0 0 80 100"
+        enable-background="new 0 0 80 80"
+        xml:space="preserve"
+      >
+        <g>
+          <path
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-miterlimit="10"
+            d="   M55.3209229,51.5432625C52.2098656,58.8641586,44.9382477,64,36.4691391,64C25.1604652,64,16,54.8394585,16,43.5309372   c0-8.4569054,5.1234818-15.716013,12.4568119-18.8395023c-1.0370693,2.4567757-1.6172791,5.1604042-1.6172791,7.9999676   c0,11.3086739,9.172823,20.4692154,20.4814205,20.4692154C50.1604424,53.1606178,52.8641472,52.5802574,55.3209229,51.5432625z"
+          />
+          <path
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-miterlimit="10"
+            d="   M38.4153099,21.503788c0,2.6463623-2.1452637,4.791626-4.791626,4.791626c2.6463623,0,4.791626,2.1453857,4.791626,4.791748   c0-2.6463623,2.1453247-4.791748,4.791687-4.791748C40.5606346,26.295414,38.4153099,24.1501503,38.4153099,21.503788z"
+          />
+          <path
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-miterlimit="10"
+            d="   M52.1070595,34.8694496c0,2.6463623-2.1452637,4.791626-4.791626,4.791626c2.6463623,0,4.791626,2.1453857,4.791626,4.791748   c0-2.6463623,2.1453247-4.791748,4.791687-4.791748C54.2523842,39.6610756,52.1070595,37.5158119,52.1070595,34.8694496z"
+          />
+          <g>
+            <g>
+              <line
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                x1="35.6604614"
+                y1="39.25"
+                x2="40.6125908"
+                y2="39.25"
+              />
+            </g>
+            <g>
+              <line
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                x1="38.1365242"
+                y1="36.7739372"
+                x2="38.1365242"
+                y2="41.7260628"
+              />
+            </g>
+          </g>
+          <g>
+            <g>
+              <line
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                x1="59.0478706"
+                y1="30.25"
+                x2="64"
+                y2="30.25"
+              />
+            </g>
+            <g>
+              <line
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                x1="61.5239372"
+                y1="27.7739353"
+                x2="61.5239372"
+                y2="32.7260628"
+              />
+            </g>
+          </g>
+          <g>
+            <g>
+              <line
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                x1="53.0478706"
+                y1="18.4760647"
+                x2="58"
+                y2="18.4760647"
+              />
+            </g>
+            <g>
+              <line
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-miterlimit="10"
+                x1="55.5239372"
+                y1="16"
+                x2="55.5239372"
+                y2="20.9521275"
+              />
+            </g>
+          </g>
+        </g>
+      </svg>
 
-        <!-- Darkmode Toggle -->
-        <div class="sm:flex hidden sm:absolute top-6 right-14 delay-700 duration-1000">
-            <label for="toggleB" class="flex items-center cursor-pointer">
-              <div class="relative">
-                <input type="checkbox" id="toggleB" class="sr-only">
-                <div class="moon-bar block bg-gray-300 w-10 h-6 rounded-full"></div>
-                <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition"></div>
-              </div>
-            </label>
-        </div>
+      <!-- Darkmode Toggle -->
+      <div
+        class="hidden duration-1000 delay-700 sm:flex sm:absolute top-6 right-14"
+      >
+        <label for="toggleB" class="flex items-center cursor-pointer">
+          <div class="relative">
+            <input type="checkbox" id="toggleB" class="sr-only" />
+            <div class="block w-10 h-6 bg-gray-300 rounded-full moon-bar"></div>
+            <div
+              class="absolute w-4 h-4 transition bg-white rounded-full dot left-1 top-1"
+            ></div>
+          </div>
+        </label>
+      </div>
 
-          
-        <!-- Mobile arrow-up -->
-        <button id=top-function class=" sm:hidden hidden w-10 h-10 animate-bounce dark:gray-svg opacity-75 fixed bottom-6 right-1 ease-in-out duration-1000">
-            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-            </svg> 
-        </button>
-        
-        <!-- Social links -->
-        <div id="socials" class="sm:bottom-1/4 float-left left-6 hidden sm:fixed sm:block duration-400">
-            <div class="left-1/2 mb-3 hidden sm:block relative sm:border-solid sm:border-l-2 sm:border-black dark:border-gray-400 h-24"> </div>
-            <a href="https://github.com/filmol" target="_blank" class="hover:text-purple-600  mr-2" label="github">
-                <svg class="m-auto mr-4 sm:mr-auto sm:mb-6 w-6 inline-block sm:block" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                </svg>
-            </a>
-            <a href="https://www.linkedin.com/in/filip-moltzer-054a9219b/" target="_blank" class="hover:text-purple-600  mr-2" label="linkedin">
-                <svg class="m-auto mr-4 sm:mr-auto sm:mb-6 w-6 inline-block sm:block" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle>
-                </svg>
-            </a>    
-            <a href="https://www.instagram.com/filipmoltzer/" target="_blank" class="hover:text-purple-600  mr-2" label="instagram">
-                <svg class="m-auto w-6 inline-block sm:block" xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg>
-            </a>
-            <div class="mt-3 hidden sm:block relative sm:border-solid sm:border-l-2 sm:border-black dark:border-gray-400 h-24 left-1/2 m-auto "></div>                       
-        </div>
+      <!-- Mobile arrow-up -->
+      <button
+        id="top-function"
+        class="fixed hidden w-10 h-10 duration-1000 ease-in-out opacity-75 sm:hidden animate-bounce dark:gray-svg bottom-6 right-1"
+      >
+        <svg
+          class="w-8 h-8"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"
+            clip-rule="evenodd"
+          ></path>
+        </svg>
+      </button>
 
+      <!-- Social links -->
+      <div
+        id="socials"
+        class="hidden float-left sm:bottom-1/4 left-6 sm:fixed sm:block duration-400"
+      >
+        <div
+          class="relative hidden h-24 mb-3 left-1/2 sm:block sm:border-solid sm:border-l-2 sm:border-black dark:border-gray-400"
+        ></div>
+        <a
+          href="https://github.com/filmol"
+          target="_blank"
+          class="mr-2 hover:text-purple-600"
+          label="github"
+        >
+          <svg
+            class="inline-block w-6 m-auto mr-4 sm:mr-auto sm:mb-6 sm:block"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+            ></path>
+          </svg>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/filip-moltzer-054a9219b/"
+          target="_blank"
+          class="mr-2 hover:text-purple-600"
+          label="linkedin"
+        >
+          <svg
+            class="inline-block w-6 m-auto mr-4 sm:mr-auto sm:mb-6 sm:block"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+            ></path>
+            <rect x="2" y="9" width="4" height="12"></rect>
+            <circle cx="4" cy="4" r="2"></circle>
+          </svg>
+        </a>
+        <a
+          href="https://www.instagram.com/filipmoltzer/"
+          target="_blank"
+          class="mr-2 hover:text-purple-600"
+          label="instagram"
+        >
+          <svg
+            class="inline-block w-6 m-auto sm:block"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </a>
+        <div
+          class="relative hidden h-24 m-auto mt-3 sm:block sm:border-solid sm:border-l-2 sm:border-black dark:border-gray-400 left-1/2"
+        ></div>
+      </div>
     </footer>
     <script src="./js/index.js"></script>
-</body>
+  </body>
 </html>
