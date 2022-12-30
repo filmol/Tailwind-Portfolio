@@ -133,7 +133,6 @@ const addListener = function () {
   resetSort();
 
   const js = document.querySelector('#javascript');
-  const sql = document.querySelector('#sql');
   const py = document.querySelector('#python');
   const all = document.querySelector('#all');
 
@@ -144,10 +143,6 @@ const addListener = function () {
   js.addEventListener('click', function () {
     addActive(this);
     sort('js');
-  });
-  sql.addEventListener('click', function () {
-    addActive(this);
-    sort('sql');
   });
   py.addEventListener('click', function () {
     addActive(this);
