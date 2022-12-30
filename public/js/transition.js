@@ -5,26 +5,6 @@ import axios from 'axios';
 
 gsap.config({ nullTargetWarn: false });
 
-export const addBar = function () {
-  // Animates and fills up the university progress bar gradually.
-  let progress = 0;
-  const graduationDay = new Date('June 30, 2022');
-  const msPerDay = 24 * 60 * 60 * 1000; // amount of milliseconds/day
-  let daysLeft = (graduationDay.getTime() - new Date().getTime()) / msPerDay;
-  daysLeft = Math.round(daysLeft);
-  let completed = ((1060 - daysLeft) / 1060) * 100;
-  completed = completed.toFixed(0);
-
-  const bar = document.getElementById('bar');
-  let progressInterval = setInterval(function () {
-    progress += 0.4;
-    bar.style.width = progress + '%';
-    if (progress >= completed) {
-      clearInterval(progressInterval);
-    }
-  }, 8);
-};
-
 export const waves = function () {
   // Hand animation that waves once the document is loaded.
   const wave = document.querySelector('.wave');
@@ -36,6 +16,25 @@ export const waves = function () {
     wave.classList.add('rotate-12');
     setTimeout(removeRotate, 300);
   }
+};
+
+export const changeText = function () {
+  // Hand animation that waves once the document is loaded.
+  let contentArray  = ['Filip Moltzer', 'a developer',
+    'a computer scientist',
+    'a tech-head', 'a front-end developer'
+  ,'a pizza enthusiast', 'Filip Moltzer']
+
+  let counter = 0;
+  function increaseCounter() {
+    if (counter == contentArray.length-1) {
+      counter = 0
+    }
+    else {counter=counter+1}
+  }
+
+  const introText = document.querySelector('#introContent');
+  setInterval(function() {introText.innerHTML = contentArray[counter], increaseCounter()}, 3000);
 };
 
 export const top = function () {
@@ -164,10 +163,10 @@ const addActive = function (lang) {
 
 export function checkDarkMode() {
   // Func should be called when darkmode is toggled. add eventlistener.
-  let html = document.querySelector('#html').classList[0];
+  let html = document.querySelector('#html').classList;
   let svg = document.getElementsByClassName('dark:gray-svg');
 
-  if (html == 'dark') {
+  if (html.contains('dark')) {
     for (let i = 0; i < svg.length; i++) {
       svg[i].style.fill = 'rgba(209, 213, 219';
     }
@@ -193,7 +192,10 @@ class Fade extends Highway.Transition {
           onComplete: function () {
             // Runs the right animations on the right page.
             if (to.classList.contains('home')) {
-              setTimeout(addBar, 3000);
+              document
+              .querySelector('#html')
+              .classList.add('overflow-hidden')
+              setTimeout(changeText(), 3000);
               addKeys();
               document
                 .querySelector('#nav-underline')
@@ -209,6 +211,9 @@ class Fade extends Highway.Transition {
               waves();
             }
             if (to.classList.contains('projects')) {
+              document
+                .querySelector('#html')
+                .classList.remove('overflow-hidden')
               addKeys();
               document
                 .querySelector('#nav-underline')

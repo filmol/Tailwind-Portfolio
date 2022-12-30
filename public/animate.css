@@ -1,0 +1,75 @@
+@-webkit-keyframes slide {
+  from {
+    -webkit-transform: translate(-50%, 0%);
+  }
+  to {
+    -webkit-transform: translate(120%, 5%);
+  }
+}
+
+.rotating {
+  -webkit-animation: slide 12s linear infinite;
+}
+
+  @-webkit-keyframes windmill {
+  from {
+    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+
+  }
+}
+
+  @-webkit-keyframes translateX {
+  0%,100% {
+    transform: translateX(0px);
+    -webkit-transform: translateX(0px);;
+  }
+  50% {
+    -webkit-transform: translateX(6px);
+  }
+}
+
+  @-webkit-keyframes translateY {
+  0%, 100%{
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(0px);  
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+  @-webkit-keyframes translateScale {
+  0%, 100%{
+    transform: scaleX(1);
+  }
+  59% {
+    transform: scaleX(1);
+  }
+  80% {
+    transform: scaleX(1.15);
+  }
+  90% {
+    transform: scaleX(1);
+  }
+
+
+}
+
+.rotatingWindmill {
+  -webkit-animation: windmill 18s linear infinite;
+}
+.ideationAnimation {
+  -webkit-animation: translateX 8s linear infinite;
+}
+.rocketAnimation {
+  -webkit-animation: translateY 18s ease-in-out infinite;
+}
+.scaleAnimation {
+  -webkit-animation: translateScale 8s ease-in-out infinite;
+}

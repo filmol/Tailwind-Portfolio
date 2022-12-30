@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@-webkit-keyframes slide {
+  from {
+    -webkit-transform: translateX(0%);
+  }
+  to {
+    -webkit-transform: translateX(120%);
+  }
+}
+
+.rotating {
+  -webkit-animation: slide 2s linear infinite;
+}
