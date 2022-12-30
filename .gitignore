@@ -54,6 +54,8 @@ node_modules
 
 # Cache for Parcel
 .cache
+.parcel-cache/*
+
 
 # Apple stuff
 .DS_Store
