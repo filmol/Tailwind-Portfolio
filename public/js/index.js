@@ -22,6 +22,25 @@ const navList = document.querySelector('.nav-list')
 const navWidth = document.querySelector('#nav-width')
 const mobileMenu = document.querySelector('#mobile-menu')
 mobileMenu.addEventListener('click', hideMenu, false)
+mobileMenu.addEventListener('click', showCard)
+
+function showCard() {
+  const stukkort = document.querySelector('#stukkort')
+  stukkort.classList.toggle('hidden')
+}
+
+const stuk1 = document.querySelector('#stuk1')
+const stuk2 = document.querySelector('#stuk2')
+stuk1.addEventListener('click', flipCard)
+stuk2.addEventListener('click', flipCard)
+const closeCard = document.querySelector('#closeCard')
+closeCard.addEventListener('click', showCard)
+closeCard.addEventListener('click', hideMenu)
+
+function flipCard() {
+  stuk1.classList.toggle('hidden')
+  stuk2.classList.toggle('hidden')
+}
 
 function showMenu(e) {
   navList.classList.add('h-96', 'absolute')
